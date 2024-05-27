@@ -1,6 +1,5 @@
 .all-projects {
-    color: #36454F
-
+    color: #36454F;
 }
 
 .left-side ul {
@@ -11,7 +10,6 @@
 .skills-title {
     font-weight: 500;
 }
-
 
 .projects-card {
     padding: 2rem;
@@ -61,12 +59,11 @@
     justify-content: center;
     gap: 5rem;
     margin-top: 2rem;
-
 }
 
 .project-link {
     color: #36454F;
-    font-size:xx-large;
+    font-size: xx-large;
 }
 
 .project-link:hover {
@@ -92,8 +89,26 @@
 .loader {
     display: flex;
     justify-content: center;
-    align-items:flex-start;
+    align-items: flex-start;
     margin-top: 5rem;
     height: 50vh;
 }
 
+@media (max-width: 768px) {
+    .card-top {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; /* Center the content horizontally */
+    }
+
+    .right-side {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Center the content vertically */
+        width: 100%; /* Make sure the right-side takes full width */
+    }
+
+    .project-image {
+        margin-left: 0;
+    }
+}

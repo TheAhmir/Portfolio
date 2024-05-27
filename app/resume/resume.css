@@ -163,4 +163,37 @@
         display: block;
         height: fit-content;
     }
+
+    .row-1, .row-2 {
+        width: 100%;
+        justify-content: center;
+        margin: 1rem;
+        margin-top: 2rem;
+    }
+
+
+    .row-1 {
+        padding-top: 2rem;
+        padding-left: 0;
+    }
+
+    .row-2 {
+        padding-bottom: 2rem;
+    }
+
+    .coursework {
+        font-size: larger;
+    }
+
+    .courses {
+        font-size: x-small;
+    }
+
+    .resume-skills {
+        font-size: small;
+    }
+
+    .major-skills {
+        height: auto;
+    }
 }

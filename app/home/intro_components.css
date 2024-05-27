@@ -39,3 +39,9 @@
     font-size: medium; /* Adjust font size as needed */
     margin-top: 10px; /* Optional: add space between title and description */
 }
+
+@media (max-width: 768px) {
+    .cards {
+        display: none;
+    }
+}

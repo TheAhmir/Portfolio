@@ -25,3 +25,19 @@
     padding-right: 2rem;
     font-size: 1rem;
 }
+
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bio {
+        font-size: medium;
+    }
+
+    .headshot {
+        max-height: 50%;
+    }
+}

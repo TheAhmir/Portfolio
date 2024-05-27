@@ -1,5 +1,3 @@
-
-
 .contact-title {
     margin-bottom: 0;
     margin-top: 10vh;
@@ -35,11 +33,9 @@
 
 .contacts-bg {
     display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
+    align-items: center; /* Center content horizontally */
+    gap: 1rem;
     padding: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
     margin: 2rem;
     background-color: whitesmoke;
     border-radius: 1px;
@@ -58,6 +54,7 @@
 
 .link-text {
     color: #696969;
+    text-align: center; /* Center text below the image */
 }
 
 .contact-form {
@@ -117,4 +114,45 @@
     align-items: center;
     font-size: x-large;
     height: 80vh;
+}
+
+@media (max-width: 768px) {
+
+    .contacts {
+        flex-direction: column; /* Stack contacts vertically on small screens */
+        gap: 1rem; /* Reduce gap between contact items */
+    }
+
+    .contacts-bg {
+        flex-direction: column; /* Stack content inside contacts-bg vertically */
+        padding: 1rem; /* Adjust padding for smaller screens */
+        margin: 1rem; /* Adjust margin for smaller screens */
+    }
+
+    .icon {
+        font-size: large; /* Adjust icon size for smaller screens */
+    }
+
+    .link-text {
+        font-size: medium; /* Adjust text size for smaller screens */
+    }
+
+    .contact-form {
+        margin: 2rem; /* Adjust margin for smaller screens */
+    }
+
+    .input {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .submit-button {
+        padding: 0.5rem 1rem; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-caption {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
