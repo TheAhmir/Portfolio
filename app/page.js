@@ -1,3 +1,5 @@
+'use client'
+
 import About_Me from "./home/about/about_me";
 import Skills from "./home/skills/skills";
 import "./homepage.css"
