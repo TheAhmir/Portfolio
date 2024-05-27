@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react';
-import Typewriter from 'typewriter-effect';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import './intro_components.css'
 
