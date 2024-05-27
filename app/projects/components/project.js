@@ -23,7 +23,9 @@ export default function Project() {
     }, []);
 
     return (
-        <div className="all-projects">
+        <>
+        {loading ? 
+            <div className="all-projects">
             {projects.map((project) => (
                 <div className="projects-card" key={project.title}>
                     <div className='card-top'>
@@ -65,6 +67,11 @@ export default function Project() {
                     </div>
                 </div>
             ))}
-        </div>
+        </div> :
+    
+    <div className='loader'>
+    <Loader />
+    </div>}
+    </>
     );
 }
