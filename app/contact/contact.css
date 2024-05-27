@@ -1,0 +1,120 @@
+
+
+.contact-title {
+    margin-bottom: 0;
+    margin-top: 10vh;
+    font-size: xxx-large;
+    font-weight: 400;
+    align-items: center;
+}
+
+.contact-intro {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-caption {
+    color: #696969;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contacts-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-bg {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 2rem;
+    background-color: whitesmoke;
+    border-radius: 1px;
+    box-shadow: 0px 2px 10px black;
+    transition: transform 0.3s ease;
+}
+
+.contacts-bg:hover {
+    transform: translateY(-5px); /* Move up by 10 pixels when hovered over */
+}
+
+.icon {
+    font-size: xx-large;
+    color: #696969;
+}
+
+.link-text {
+    color: #696969;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 4rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.textarea {
+    height: 150px;
+    resize: vertical; /* Allow vertical resize but disable horizontal resize */
+}
+
+.submit-button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.submit-button {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    height: 80vh;
+}

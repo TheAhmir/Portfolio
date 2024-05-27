@@ -1,0 +1,32 @@
+.icon-list {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.icon {
+    font-size: 2rem; /* Adjust icon size as needed */
+    color: rgba(240, 248, 255, 0.6); /* Default color with 60% opacity */
+    transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transition for color and opacity change */
+}
+
+.icon.github:hover {
+    color: whitesmoke; /* GitHub color */
+}
+
+.icon.linkedin:hover {
+    color: #0A66C2; /* LinkedIn color */
+}
+
+.icon.tableau:hover {
+    color: #E97627; /* Tableau color */
+}
+
+.creds {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    margin-top: 8px;
+    color: rgba(240, 248, 255, 0.6);
+}

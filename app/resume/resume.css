@@ -1,0 +1,166 @@
+.resume-page {
+    padding-bottom: 4rem;
+}
+
+.row-1 {
+    width: 50%;
+    padding-left: 2rem;
+}
+
+.row-2 {
+    width: 50%;
+    padding-right: 2rem;
+}
+
+.courses {
+    font-size: small;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    gap: 0;
+}
+
+.resume-title {
+    margin-left: 2rem;
+}
+
+.resume-page-title {
+    margin-bottom: 0;
+    margin-top: 10vh;
+    font-size: xxx-large;
+    font-weight: 400;
+    align-items: center;
+}
+
+.major {
+    display: flex;
+    background: whitesmoke;
+    height: 16rem;
+    color: black;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 1px;
+    box-shadow: 0px 2px 10px black;
+}
+
+.major-skills {
+    display: flex;
+    background: whitesmoke;
+    height: 17rem;
+    color: black;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 1px;
+    box-shadow: 0px 2px 10px black;
+}
+
+.intro {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.accomplishment-text {
+    text-indent: 20px;
+  }
+
+
+.download {
+    display: flex;
+    width: 100vw;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.coursework {
+    color: #36454F;
+}
+
+.download-button {
+    margin-right: 2rem;
+    font-size: medium;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+
+
+.download-button:hover {
+    color: black;
+    background-color: cornflowerblue;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 6px 0.5px gray;
+}
+
+.time {
+    color: brown;
+}
+
+.setting {
+    h4 {
+        font-size: larger;
+        font-weight: 600;
+    }
+    h3 {
+        font-size: medium;
+        font-weight: 400;
+    }
+}
+
+.setting h4,
+.setting h3 {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove any padding if necessary */
+}
+
+.setting h4 {
+    margin-bottom: 0.2rem; /* Adjust this value to control the spacing */
+}
+
+.setting h3 {
+    margin-top: 0.2rem; /* Adjust this value to control the spacing */
+}
+
+.degree {
+    font-weight: 500;
+}
+
+.resume-skills {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+
+.resume-accomplishments {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.accomplishments-major {
+    display: flex;
+    background: whitesmoke;
+    color: black;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 1px;
+    box-shadow: 0px 2px 10px black;
+}
+
+@media (max-width: 768px) {
+    .major {
+        display: block;
+        height: fit-content;
+    }
+}

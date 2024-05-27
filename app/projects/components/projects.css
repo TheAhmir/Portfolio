@@ -1,0 +1,99 @@
+.all-projects {
+    color: #36454F
+
+}
+
+.left-side ul {
+    column-count: 2;
+    column-gap: 1rem; /* Adjust the gap between columns as needed */
+}
+
+.skills-title {
+    font-weight: 500;
+}
+
+
+.projects-card {
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+    background-color: whitesmoke;
+    border-radius: 1px;
+    box-shadow: 0px 2px 10px black;
+    transition: transform 0.3s ease;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1; /* Allow the left side to take up available space */
+}
+
+.right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Center the content vertically */
+    margin-left: auto; /* Push the right side to the extreme right */
+}
+
+.project-image {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 2rem;
+}
+
+.card-bottom {
+    margin-top: 1rem;
+}
+
+.project-icons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+
+}
+
+.project-link {
+    color: #36454F;
+    font-size:xx-large;
+}
+
+.project-link:hover {
+    color: black;
+}
+
+.hover-eye {
+    display: none;
+}
+
+.project-icons .eye-icon:hover .default-eye {
+    display: none;
+}
+
+.project-icons .eye-icon:hover .hover-eye {
+    display: block;
+}
+
+.project-desc {
+    color: #36454F;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    margin-top: 5rem;
+    height: 50vh;
+}
+

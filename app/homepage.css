@@ -1,0 +1,79 @@
+.starter {
+    width: 100%;
+    min-height: 100vh; /* Set minimum height to viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--background-end-rgb), 1)
+    );
+    padding-bottom: 5rem;
+}
+
+.beginning {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ahmir {
+    margin-bottom: 0;
+    margin-top: 10vh;
+    font-size: xxx-large;
+    font-weight: 400;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 60px;
+}
+
+.resumeButton {
+    color: whitesmoke;
+    font-size: x-small;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    margin-top: 10vh;
+    box-shadow: 0px 0px 6px 0.5px lightblue;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+.resumeButton:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.resumeButton h1 {
+    font-weight: 400;
+}
+
+.about-page {
+    margin-top: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--background-end-rgb), 1)
+    );
+    min-height: 95vh; /* Set minimum height to viewport height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-page {
+    background: linear-gradient(
+        to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--background-end-rgb), 1)
+    );
+    min-height: 95vh; /* Set minimum height to viewport height */
+    width: 100%;
+    display: flex;
+}

@@ -1,0 +1,60 @@
+
+
+.bg {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    position: relative;
+    display: flex;
+    width: fit-content;
+}
+
+.nav-items {
+    display: flex;
+    gap: 50px;
+    font-size: small;
+}
+
+.nav-text {
+    width: max-content;
+    text-align: center;
+    color: #696969;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.nav-text:hover {
+    color: #36454F;
+}
+
+.nav-text.active {
+    box-shadow: 0 6px 5px -6px black;
+    color: black;
+}
+
+.menuButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: xxx-large;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menuButton {
+        display: block; 
+    }
+
+    .nav-list {
+        display: none;
+    }
+}

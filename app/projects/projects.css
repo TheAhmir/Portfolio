@@ -1,0 +1,18 @@
+.projects-title {
+    margin-bottom: 3rem;
+    margin-top: 10vh;
+    font-size: xxx-large;
+    font-weight: 400;
+    align-items: center;
+}
+
+.projects-intro {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-items {
+    padding-bottom: 4rem;
+}

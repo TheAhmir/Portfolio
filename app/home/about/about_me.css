@@ -1,0 +1,27 @@
+.page {
+    width: 100vw;
+    margin-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    align-items: top; /* Align items vertically */
+    justify-content: center; /* Align items horizontally */
+    padding: 20px; /* Add padding for spacing */
+    margin-top: 0;
+}
+
+.headshot {
+    max-width: 35%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.bio {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+}
