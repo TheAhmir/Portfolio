@@ -18,14 +18,14 @@ export default async function Flashcards() {
     }
     return (
         <>
-        <p className="summary">Through collecting, analyzing, and visualizing, I specialize in transforming complex data into valuable insights. With A bachelor's in Data Science and Computer Science, I possess strong skills utilizing python, R, relational and non-relational databases, and Tablaeu.</p>
+        <p className="summary">Through collecting, analyzing, and visualizing, I specialize in transforming complex data into valuable insights. With a bachelor&apos;s in Data Science and Computer Science, I possess strong skills utilizing Python, R, relational and non-relational databases, and Tableau.</p>
         <div className='cards'>
             <div className='single_card'>
             {intro.part1_image && (
                 <img 
                 className='image'
                 src={urlFor(intro.part1_image)}
-                alt={`${intro.part1_name}-image`}
+                alt={`${intro.part1_name.replace("'", "&apos;")}-image`}
                 />
             )}
             {intro.part1_name && (
@@ -40,7 +40,7 @@ export default async function Flashcards() {
                 <img 
                 className='image'
                 src={urlFor(intro.part2_image)}
-                alt={`${intro.part3_name}-image`}
+                alt={`${intro.part2_name.replace("'", "&apos;")}-image`}
                 />
             )}
             {intro.part2_name && (
@@ -55,7 +55,7 @@ export default async function Flashcards() {
                 <img 
                 className='image'
                 src={urlFor(intro.part3_image)}
-                alt={`${intro.part3_name}-image`}
+                alt={`${intro.part3_name.replace("'", "&apos;")}-image`}
                 />
             )}
             {intro.part3_name && (

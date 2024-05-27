@@ -50,7 +50,7 @@ export default function Page() {
         <div>
             <div className='contact-intro'>
                 <h1 className='contact-title'>Get In Touch</h1>
-                <p className="contact-caption">Interested in working together?I’d love to hear from you.</p>
+                <p className="contact-caption">Interested in working together? I’d love to hear from you.</p>
             </div>
             <div className='contacts'>
                 <div className="contacts-item">
