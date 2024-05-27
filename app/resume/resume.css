@@ -44,6 +44,10 @@
     box-shadow: 0px 2px 10px black;
 }
 
+.list-item {
+    font-weight: 600;
+}
+
 .major-skills {
     display: flex;
     background: whitesmoke;

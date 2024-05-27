@@ -53,7 +53,7 @@ export default function Page() {
                             <h2 className='coursework'>Relevant Coursework:</h2>
                             <div className='courses'>
                             {cs_courses.map((course, index) => (
-                                <h3 key={index}>• {course}</h3>
+                                <h3 className='list-item' key={index}>• {course}</h3>
                             ))}
                             </div>
                         </div>
@@ -71,7 +71,7 @@ export default function Page() {
                             <h2 className='coursework'>Relevant Coursework:</h2>
                             <div className='courses'>
                             {ds_courses.map((course, index) => (
-                                <h3 key={index}>• {course}</h3>
+                                <h3 className='list-item' key={index}>• {course}</h3>
                             ))}
                             </div>
                         </div>
