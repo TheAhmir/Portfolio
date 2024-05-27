@@ -5,6 +5,7 @@ import "./homepage.css"
 import Link from "next/link";
 import Typewriter_Component from "./home/typewriter";
 import Flashcards from "./home/flashcards";
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 export default function Home() {
 
