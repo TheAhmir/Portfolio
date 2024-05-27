@@ -22,14 +22,6 @@ export default function Project() {
         fetchProjects();
     }, []);
 
-    if (loading) {
-        return (
-            <div className='loader'>
-                <Loader />
-            </div>
-        );
-    }
-
     return (
         <div className="all-projects">
             {projects.map((project) => (
