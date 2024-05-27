@@ -8,13 +8,25 @@ import Flashcards from "./home/flashcards";
 
 export default function Home() {
 
+  const [text] = useTypewriter({ // Destructure the value returned by useTypewriter
+    words: [
+        "Data Analyst",
+        "William and Mary, 2024 Graduate"
+    ],
+    loop: true,
+    delaySpeed: 2000,
+});
+
   return (
     <div className="homepage">
       <div className="pages">
       <div className="starter">
         <div className="beginning">
         <h1 className="ahmir">Ahmir Postell</h1>
-        <Typewriter_Component />
+        <h3>
+            <span className='job-title'>{text}</span>
+            <Cursor cursorColor= '#313bac' />
+        </h3>
         <Flashcards />
         
         <div className="links">
