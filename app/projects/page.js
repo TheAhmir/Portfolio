@@ -1,5 +1,3 @@
-'use client'
-
 import Project from "./components/project";
 import "./projects.css";
 

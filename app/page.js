@@ -1,22 +1,11 @@
-'use client'
-
 import About_Me from "./home/about/about_me";
+import Skills from "./home/skills/skills";
 import "./homepage.css"
 import Link from "next/link";
 import Typewriter_Component from "./home/typewriter";
 import Flashcards from "./home/flashcards";
-import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
 export default function Home() {
-
-  const [text] = useTypewriter({ // Destructure the value returned by useTypewriter
-    words: [
-        "Data Analyst",
-        "William and Mary, 2024 Graduate"
-    ],
-    loop: true,
-    delaySpeed: 2000,
-});
 
   return (
     <div className="homepage">
@@ -24,10 +13,7 @@ export default function Home() {
       <div className="starter">
         <div className="beginning">
         <h1 className="ahmir">Ahmir Postell</h1>
-        <h3>
-            <span className='job-title'>{text}</span>
-            <Cursor cursorColor= '#313bac' />
-        </h3>
+        <Typewriter_Component />
         <Flashcards />
         
         <div className="links">
