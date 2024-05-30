@@ -23,7 +23,7 @@ export default function Page() {
         'Applied Data Analytics in R']
 
     const accomplishments = {
-        'NCAA Collegiate Division I Gymnast' : "As a former NCAA Division 1 Men\'s Gymnast, I dedicated myself to the rigorous training and competitive spirit of collegiate gymnastics. Representing my university with pride, I honed not only my athletic skills but also developed invaluable teamwork and leadership qualities that continue to shape my character today. Competing at the highest level of collegiate athletics instilled in me a deep sense of discipline, resilience, and passion for achieving excellence in all endeavors."
+        'NCAA Collegiate Division I Gymnast' : "As a former NCAA Division 1 Men\'s Gymnast, I dedicated myself to the rigorous training and competitive spirit of collegiate gymnastics. Representing my university, I honed not only my athletic skills but also developed an invaluable foundation in teamwork that continue to shape my character today. Competing at the highest level of collegiate athletics instilled in me a deep sense of discipline, resilience, and passion for achieving excellence in all endeavors."
     }
 
     return (
