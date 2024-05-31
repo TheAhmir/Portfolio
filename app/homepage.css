@@ -1,3 +1,7 @@
+.homepage {
+    overflow-x: hidden;
+}
+
 .starter {
     width: 100%;
     min-height: 100vh; /* Set minimum height to viewport height */
