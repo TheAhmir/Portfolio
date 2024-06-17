@@ -9,7 +9,7 @@ export default function Typewriter_Component() {
         words: [
             "William and Mary, 2024 Graduate",
             "Skilled in Python, R, JavaScript, and SQL",
-            "Eager to Learn and Grow"
+            "Website developed using React"
         ],
         loop: true,
         delaySpeed: 2000,
