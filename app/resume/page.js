@@ -83,7 +83,7 @@ export default function Page() {
                 <h1 className='resume-title'>Professional Skills</h1>
                 <div className='major-skills'>
                     <div className='resume-skills'>
-                        <li><b>Programming Languages: </b>Python, R, Java, JavaScript, HTML, CSS, SQL</li>
+                        <li><b>Programming Languages: </b>Python, R, Java, JavaScript, HTML, CSS, SQL, C</li>
                         <li><b>Data Science Packages/Libraries: </b>Python (numpy, Pandas, Matplotlib, Scikit-Learn, Pyvis, NetworkX, Spacy, NLTK), R (dplyr, ggplot2)</li>
                         <li><b>Technologies & Techniques: </b>Microsoft Office, Tableau, Git, Xcode, React, Web Scraping, Data Engineering, Data Cleaning, Database Management, Data Visualization, Statistical Analysis, Regression, Predictive Analytics, Streamlit</li>
                     </div>
