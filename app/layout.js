@@ -30,7 +30,11 @@ export default function RootLayout({ children }) {
           sizes="<generated>"
         />
       </head>
-      <ClerkProvider>
+      <ClerkProvider appearance={{
+        elements: {
+          footer: "hidden",
+        },
+      }}>
       <body className={inter.className}>
         <div className="nav">
           <Nav />
