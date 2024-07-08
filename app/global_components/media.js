@@ -6,7 +6,7 @@ import './media.css'
 
 export default function Media() {
     const navigation = usePathname();
-    const hideComponents = navigation === '/admin-notes' || navigation.startsWith('/admin-notes');
+    const hideComponents = navigation === '/admin' || navigation.startsWith('/admin');
 
     const data = {
         'LinkedIn': 'https://www.linkedin.com/in/ahmir-postell',
@@ -15,7 +15,7 @@ export default function Media() {
     };
 
     if (hideComponents) return <></>
-    
+
     return (
         <>
         <Divider variant="middle" sx={{ bgcolor: 'aliceblue' }} /> 
