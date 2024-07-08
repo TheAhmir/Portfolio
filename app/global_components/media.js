@@ -6,7 +6,7 @@ import './media.css'
 
 export default function Media() {
     const navigation = usePathname();
-    const hideComponents = navigation === '/admin' || navigation.startsWith('/admin');
+    const hideComponents = navigation === '/admin/home' || navigation.startsWith('/admin/home');
 
     const data = {
         'LinkedIn': 'https://www.linkedin.com/in/ahmir-postell',
@@ -30,7 +30,16 @@ export default function Media() {
                 <SiTableau className="icon tableau" />
             </a>
 
-            <div className='creds'>@ 2024 by Ahmir Postell</div>
+            {
+            navigation === '/admin/sign-in' ?
+            <div className='creds'>
+                @ 2024 by Ahmir Postell
+            </div>
+            :
+            <a href="/admin/sign-in" rel="noopener noreferrer" className='creds'>
+                @ 2024 by Ahmir Postell
+            </a>
+            }
         </div>
         </>
     );

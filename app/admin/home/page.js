@@ -1,6 +1,7 @@
 
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import { SignOutButton } from "@clerk/nextjs";
 import "./admin-home.css"
 
 export default function Page() {
@@ -11,7 +12,10 @@ export default function Page() {
 
   return (
     <div className='home-page'>
-        <h1>hi</h1>
+        <h1>Congrats! You are now signed in!</h1>
+        <SignOutButton redirectUrl= "/">
+        <button>Sign out</button>
+      </SignOutButton>
     </div>
   )
 }

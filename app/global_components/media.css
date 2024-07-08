@@ -25,6 +25,7 @@
 
 .creds {
     position: absolute;
+    text-decoration: none;
     right: 0;
     margin-right: 2rem;
     margin-top: 8px;
