@@ -7,7 +7,13 @@ export default function Page() {
 
   return (
     <div className='admin-page'>
-        <SignIn />
+        <SignIn appearance={{
+        elements: {
+          footer: {
+            display: 'none',
+          },
+        },
+      }} />
     </div>
   )
 }
