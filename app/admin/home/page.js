@@ -7,7 +7,7 @@ import "./admin-home.css"
 export default function Page() {
     const { userId } = auth();
     if (!userId) {
-        redirect('/admin');
+        redirect('/admin/sign-in');
       }
 
   return (
