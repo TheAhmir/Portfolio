@@ -11,6 +11,8 @@ export default function Nav() {
     const navigation = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const hideComponents = navigation === '/admin-notes' || navigation.startsWith('/admin-notes');
+
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -18,6 +20,8 @@ export default function Nav() {
     const handleMenuOffClick = () => {
         setIsMenuOpen(false);
     };
+
+    if (hideComponents) return <></>
 
     return (
         <>

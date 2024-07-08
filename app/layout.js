@@ -2,8 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "../nav/nav.js"
 import React from "react";
-import Divider from '@mui/material/Divider';
 import Media from "./global_components/media";
+import { ClerkProvider } from '@clerk/nextjs';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
           sizes="<generated>"
         />
       </head>
+      <ClerkProvider>
       <body className={inter.className}>
         <div className="nav">
           <Nav />
@@ -37,11 +38,9 @@ export default function RootLayout({ children }) {
         <div className="children">
           {children}
         </div>
-        <div className="divider">
-        <Divider variant="middle" sx={{ bgcolor: 'aliceblue' }} /> 
         <Media />
-        </div>
       </body>
+      </ClerkProvider>
     </html>
   );
 }

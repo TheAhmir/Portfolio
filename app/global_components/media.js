@@ -1,14 +1,24 @@
-// imports for each item
+"use client"
 import { SiTableau, SiLinkedin, SiGithub } from "react-icons/si";
+import { usePathname } from 'next/navigation';
+import Divider from '@mui/material/Divider';
 import './media.css'
 
 export default function Media() {
+    const navigation = usePathname();
+    const hideComponents = navigation === '/admin-notes' || navigation.startsWith('/admin-notes');
+
     const data = {
         'LinkedIn': 'https://www.linkedin.com/in/ahmir-postell',
         'Tableau': 'https://public.tableau.com/app/profile/ahmir.postell/vizzes',
         'Github': 'https://github.com/TheAhmir/'
     };
+
+    if (hideComponents) return <></>
+    
     return (
+        <>
+        <Divider variant="middle" sx={{ bgcolor: 'aliceblue' }} /> 
         <div className="icon-list">
             <a href={data['Github']} target="_blank" rel="noopener noreferrer">
                 <SiGithub className="icon github" />
@@ -22,5 +32,6 @@ export default function Media() {
 
             <div className='creds'>@ 2024 by Ahmir Postell</div>
         </div>
+        </>
     );
 }
