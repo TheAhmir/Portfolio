@@ -38,6 +38,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <link
+          rel="canonical"
+          href="https://ahmirpostell.com"
+          key="canonical"
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
