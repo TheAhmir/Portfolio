@@ -5,12 +5,33 @@ import React from "react";
 import Divider from '@mui/material/Divider';
 import Media from "./global_components/media";
 import { ClerkProvider } from '@clerk/nextjs';
+import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ahmir Postell",
-  description: "Data Science Portfolio",
+  title: "Ahmir Postell - Data Analyst & Data Scientist Portfolio",
+  description: "https://ahmirpostell.com - Ahmir Postell's professional portfolio showcasing expertise in data analysis, data science, and business analytics. Discover projects, skills in Python, R, SQL, and Tableau, and insights into transforming complex data into actionable insights. Connect with me for data-driven solutions and professional collaborations.",
+  keywords: [
+    "ahmir",
+    "postell",
+    "ahmirpostell",
+    "ahmir postell",
+    "data analyst",
+    "data science",
+    "python",
+    "r",
+    "portfolio",
+    "react",
+    "machine learning",
+    "business analytics",
+    "SQL",
+    "professional portfolio",
+    "personal portfolio",
+    "Ahmir Postell portfolio"
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -31,6 +52,8 @@ export default function RootLayout({ children }) {
           sizes="<generated>"
         />
       </head>
+      <GoogleTagManager gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <ClerkProvider>
       <body className={inter.className}>
         <div className="nav">

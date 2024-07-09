@@ -2,6 +2,27 @@ import React from 'react';
 import Link from "next/link";
 import "./resume.css"
 import Divider from '@mui/material/Divider';
+import { Metadata } from 'next';
+ 
+export const metadata = {
+    title: "Ahmir Postell - Resume | Data Analyst & Data Scientist",
+    description: "Discover Ahmir Postell's detailed resume showcasing his expertise in data analysis, data science, and business analytics. Review his skills in Python, R, SQL, and Tableau, professional experience, and academic achievements. Connect for data-driven solutions and collaboration.",
+    keywords: [
+      "Ahmir Postell resume",
+      "Data Analyst resume",
+      "Data Scientist resume",
+      "data analysis",
+      "business analytics",
+      "Python",
+      "R",
+      "SQL",
+      "Tableau",
+      "professional experience",
+      "academic achievements"
+    ]
+  };
+  
+  
 
 export default function Page() {
 
