@@ -1,30 +1,24 @@
-'use client';
+'use client'
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import './intro_components.css';
+import './intro_components.css'
 
 export default function Typewriter_Component() {
-  const [text, setText] = useState('');
+    const [text] = useTypewriter({ // Destructure the value returned by useTypewriter
+        words: [
+            "William and Mary, 2024 Graduate",
+            "Data Analyst",
+            "Website developed using React"
+        ],
+        loop: true,
+        delaySpeed: 2000,
+    });
 
-  const [typewriterText] = useTypewriter({
-    words: [
-      "William and Mary, 2024 Graduate",
-      "Data Analyst",
-      "Website developed using React"
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
-
-  useEffect(() => {
-    setText(typewriterText);
-  }, [typewriterText]);
-
-  return (
-    <h3>
-      <span className='job-title'>{text}</span>
-      <Cursor cursorColor='#313bac' />
-    </h3>
-  );
+    return (
+        <h3>
+            <span className='job-title'>{text ? text : 'Data Analyst'}</span>
+            {text ? <Cursor cursorColor= '#313bac' /> : <></>}
+        </h3>
+    );
 }
