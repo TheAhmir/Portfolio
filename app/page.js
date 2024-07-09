@@ -1,6 +1,5 @@
 import About_Me from "./home/about/about_me";
-import Skills from "./home/skills/skills";
-import "./homepage.css"
+import "./homepage.css";
 import Link from "next/link";
 import Typewriter_Component from "./home/typewriter";
 import Flashcards from "./home/flashcards";
