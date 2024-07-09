@@ -17,8 +17,8 @@ export default function Typewriter_Component() {
 
     return (
         <h3>
-            <span className='job-title'>{text ? text : 'Data Analyst'}</span>
-            {text ? <Cursor cursorColor= '#313bac' /> : <></>}
+            <span className='job-title'>{text}</span>
+            <Cursor cursorColor= '#313bac' />
         </h3>
     );
 }

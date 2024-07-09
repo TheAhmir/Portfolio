@@ -1,4 +1,5 @@
 "use client"
+
 import { SiTableau, SiLinkedin, SiGithub } from "react-icons/si";
 import { usePathname } from 'next/navigation';
 import Divider from '@mui/material/Divider';
