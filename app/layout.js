@@ -9,11 +9,14 @@ import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
+// to improve seo
+// - decrease descriptions to less than 100 characters
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ahmir Postell - Data Analyst & Data Scientist Portfolio",
-  description: "https://ahmirpostell.com - Ahmir Postell's professional portfolio showcasing expertise in data analysis, data science, and business analytics. Discover projects, skills in Python, R, SQL, and Tableau, and insights into transforming complex data into actionable insights. Connect with me for data-driven solutions and professional collaborations.",
+  title: "Ahmir Postell - Data Analyst Portfolio",
+  description: "Ahmir Postell's portfolio showcasing technical skills and projects. Learn more or contact me.",
   keywords: [
     "ahmir",
     "postell",

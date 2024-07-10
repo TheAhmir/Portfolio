@@ -5,8 +5,8 @@ import Divider from '@mui/material/Divider';
 import { Metadata } from 'next';
  
 export const metadata = {
-    title: "Ahmir Postell - Resume | Data Analyst & Data Scientist",
-    description: "Discover Ahmir Postell's detailed resume showcasing his expertise in data analysis, data science, and business analytics. Review his skills in Python, R, SQL, and Tableau, professional experience, and academic achievements. Connect for data-driven solutions and collaboration.",
+    title: "Ahmir Postell - Resume | Data Analyst Portfolio",
+    description: "Ahmir Postell's resume: education, technical skills, and achievements. Connect to view resume.",
     keywords: [
       "Ahmir Postell resume",
       "Data Analyst resume",
