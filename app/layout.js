@@ -9,9 +9,6 @@ import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-// to improve seo
-// - decrease descriptions to less than 100 characters
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
