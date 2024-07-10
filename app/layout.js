@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
       </head>
       <GoogleTagManager gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+      <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
       <ClerkProvider>
       <body className={inter.className}>
         <div className="nav">
