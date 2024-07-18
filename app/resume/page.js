@@ -72,7 +72,7 @@ export default function Page() {
                         </div>
                         <div className='row-2'>
                         <h2 className='coursework'>
-                            <a className='in-progress-button' href='https://online.mason.wm.edu/msba#gain-a-competitive-advantage' target="_blank" style={{ textDecoration: 'none' }}>
+                            <a className='in-progress-button' href='https://online.mason.wm.edu/msba/' target="_blank" style={{ textDecoration: 'none' }}>
                             Learn More About My MSBA
                             </a>
                         </h2>
