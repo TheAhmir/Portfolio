@@ -100,7 +100,6 @@
     cursor: pointer; /* Pointer/hand icon */
     border-radius: 8px; /* Rounded corners */
     transition-duration: 0.4s; /* Transition effect */
-    margin-top: 3rem;
 }
 
 .in-progress-button:hover {
@@ -111,7 +110,7 @@
 
 .parent-container {
     display: flex;
-    justify-content:center;
+    justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
 }

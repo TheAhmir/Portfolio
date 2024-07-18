@@ -71,7 +71,7 @@ export default function Page() {
                             <h4 className='degree'>Mastors of Science in <b>Business Analytics</b> (MSBA)</h4>
                         </div>
                         <div className='row-2'>
-                        <h2 className='parent-container'>
+                        <h2 className='coursework'>
                             <a className='in-progress-button' href='https://online.mason.wm.edu/msba#gain-a-competitive-advantage' target="_blank" style={{ textDecoration: 'none' }}>
                             Learn More About My MSBA
                             </a>
