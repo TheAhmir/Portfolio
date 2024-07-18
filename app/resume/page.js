@@ -63,7 +63,7 @@ export default function Page() {
                 <div>
                     <div className='major'>
                         <div className='row-1'>
-                            <h2 className='time'>Expected Feb. 2025 </h2>
+                            <h2 className='time'>Expected Feb. 2026</h2>
                             <div className='setting'>
                                 <h4>William and Mary</h4>
                                 <h3>Williamsburg, Virginia</h3>
