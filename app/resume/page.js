@@ -63,6 +63,29 @@ export default function Page() {
                 <div>
                     <div className='major'>
                         <div className='row-1'>
+                            <h2 className='time'>Expected Feb. 2025 </h2>
+                            <div className='setting'>
+                                <h4>William and Mary</h4>
+                                <h3>Williamsburg, Virginia</h3>
+                            </div>
+                            <h4 className='degree'>Mastors of Science in <b>Business Analytics</b> (MSBA)</h4>
+                        </div>
+                        <div className='row-2'>
+                        <h2 className='parent-container'>
+                            <a className='in-progress-button' href='https://online.mason.wm.edu/msba#gain-a-competitive-advantage' target="_blank" style={{ textDecoration: 'none' }}>
+                            Learn More About My MSBA
+                            </a>
+                        </h2>
+                            {/*
+                            <div className='courses'>
+                            {cs_courses.map((course, index) => (
+                                <h3 className='list-item' key={index}>• {course}</h3>
+                            ))}
+                            </div> */}
+                        </div>
+                    </div>
+                    <div className='major'>
+                        <div className='row-1'>
                             <h2 className='time'>2020 - 2024</h2>
                             <div className='setting'>
                                 <h4>William and Mary</h4>
