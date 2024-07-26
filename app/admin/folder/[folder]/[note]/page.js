@@ -1,4 +1,4 @@
-export default function Page({folderID}) {
+export default function Page() {
 
     return (
         <div>

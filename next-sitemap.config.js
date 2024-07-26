@@ -1,19 +1,23 @@
 module.exports = {
-    siteUrl: 'https://ahmirpostell.com',
-    generateRobotsTxt: true, // (optional)
-    exclude: ['\admin'],
-    alternateRefs: [
+  siteUrl: 'https://ahmirpostell.com',
+  generateRobotsTxt: true,
+  exclude: ['/admin'],
+  alternateRefs: [
+    {
+      href: 'https://ahmir-postell.netlify.app/',
+      hreflang: 'en',
+    },
+  ],
+  robotsTxtOptions: {
+    policies: [
       {
-        href: 'https://ahmir-postell.netlify.app/',
-        hreflang: 'en',
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: '*',
+        disallow: '/admin',
       },
     ],
-    robotsTxtOptions: {
-      policies: [
-        {
-          userAgent: '*',
-          allow: '/',
-        },
-      ],
-    },
-  }
+  },
+}
