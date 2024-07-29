@@ -11,6 +11,7 @@ module.exports = {
       href: 'https://www.ahmirpostell.com',
       hreflang: 'en',
     },
+    
   ],
   robotsTxtOptions: {
     policies: [
