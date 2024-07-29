@@ -1,0 +1,13 @@
+# Allow all
+User-agent: *
+Allow: /
+
+# Disallow /admin
+User-agent: *
+Disallow: /admin
+
+# Host
+Host: https://ahmirpostell.com
+
+# Sitemaps
+Sitemap: https://ahmirpostell.com/sitemap.xml
