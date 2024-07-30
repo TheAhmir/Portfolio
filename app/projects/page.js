@@ -1,4 +1,5 @@
 import Project from "./components/project";
+import Head from 'next/head';
 import "./projects.css";
 
 export const metadata = {
@@ -23,6 +24,14 @@ export const metadata = {
 export default function Page() {
 
     return (
+        <>
+        <Head>
+        <link
+          rel="canonical"
+          href="https://ahmirpostell.com/projects"
+          key="canonical"
+        />
+        </Head>
         <div>
             <div className="projects-intro">
                 <h1 className="projects-title">Projects</h1>
@@ -30,5 +39,6 @@ export default function Page() {
                 <Project />
             
         </div>
+        </>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import "./resume.css"
 import Divider from '@mui/material/Divider';
-import { Metadata } from 'next';
+import Head from 'next/head';
  
 export const metadata = {
     title: "Ahmir Postell - Resume | Data Analyst Portfolio",
@@ -48,6 +48,14 @@ export default function Page() {
     }
 
     return (
+        <>
+        <Head>
+        <link
+          rel="canonical"
+          href="https://ahmirpostell.com/resume"
+          key="canonical"
+        />
+        </Head>
         <div className='resume-page'>
             <div className='intro'>
                 <h1 className='resume-page-title '>Resume</h1>
@@ -148,6 +156,7 @@ export default function Page() {
 </div>
 
         </div>
+        </>
 
     );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "./contact"
+import Head from 'next/head';
 
 export const metadata = {
     title: "Ahmir Postell - Contact | Data Analyst Portfolio",
@@ -23,6 +24,13 @@ export default function Page() {
 
     return (
         <>
+        <Head>
+        <link
+          rel="canonical"
+          href="https://ahmirpostell.com/contact"
+          key="canonical"
+        />
+        </Head>
         <Contact />
         </>
     );
