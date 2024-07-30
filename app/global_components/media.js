@@ -22,7 +22,7 @@ export default function Media() {
         <Divider variant="middle" sx={{ bgcolor: 'aliceblue' }} /> 
         <div className="icon-list">
             <a href={data['Github']} target="_blank" rel="noopener noreferrer">
-                <SiGithub className="icon github" />
+                <SiGithub className="icon github"/>
             </a>
             <a href={data['LinkedIn']} target="_blank" rel="noopener noreferrer">
                 <SiLinkedin className="icon linkedin" />

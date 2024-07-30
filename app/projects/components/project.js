@@ -51,7 +51,7 @@ export default function Project() {
                             className="project-image"
                             src={urlFor(project.image)}
                             width={200}
-                            alt="Project"
+                            alt={`${project.title}-image`}
                             loading="lazy"
                         />
                     </div>
@@ -60,11 +60,11 @@ export default function Project() {
                         <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.5 }} />
                         <div className="project-icons">
                             <a className="project-link" href={project.code} target="_blank" rel="noopener noreferrer">
-                                <SiGithub />
+                                <SiGithub alt='View Code'/>
                             </a>
                             <a className="project-link eye-icon" href={project.vis} target="_blank" rel="noopener noreferrer">
                                 <FaRegEye className="default-eye" />
-                                <FaEye className="hover-eye" />
+                                <FaEye className="hover-eye" alt='View Visual Representation'/>
                             </a>
                         </div>
                     </div>
