@@ -5,6 +5,7 @@ import React from "react";
 import Divider from '@mui/material/Divider';
 import Media from "./global_components/media";
 import Head from 'next/head';
+import { ClerkProvider } from '@clerk/nextjs';
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
       <GoogleTagManager gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
+      <ClerkProvider>
       <body className={inter.className}>
         <div className="nav">
           <Nav />
@@ -66,6 +68,7 @@ export default function RootLayout({ children }) {
         <Media />
         </div>
       </body>
+      </ClerkProvider>
     </html>
   );
 }
