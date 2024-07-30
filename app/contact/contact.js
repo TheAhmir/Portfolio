@@ -10,7 +10,7 @@ export default function Contact() {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
+        setResult("Sending...");
 
         const formData = new FormData(event.target);
 
@@ -35,7 +35,7 @@ export default function Contact() {
             const data = await response.json();
 
             if (data.success) {
-                setResult("Your message has been sent Successfully.\nI will be in touch as soon as possible.");
+                setResult("Your message has been sent successfully. I will be in touch as soon as possible.");
                 event.target.reset();  // Reset the form fields
             } else {
                 console.log("Error", data);
@@ -55,7 +55,7 @@ export default function Contact() {
             </div>
             <div className='contacts'>
                 <div className="contacts-item">
-                    <a href="tel:7577496382" target='_blank' style={{ textDecoration: 'none' }} className="contacts-bg">
+                    <a href="tel:7577496382" target='_blank' rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="contacts-bg">
                         <img src='/mobile.png' width={45} alt="Phone Icon" />
                         <p className='link-text'>+757-749-6382</p>
                     </a>
@@ -69,36 +69,44 @@ export default function Contact() {
             </div>
             {!result ? (
                 <form className="contact-form" onSubmit={onSubmit}>
+                    <label htmlFor="full_name" label/>
                     <input
                         className="input"
                         type="text"
+                        id="full_name"
                         name="full_name"
                         placeholder="Full Name"
                         required
                     />
+                    <label htmlFor="email" label/>
                     <input
                         className="input"
                         type="email"
+                        id="email"
                         name="email"
                         placeholder="Email"
                         required
                     />
+                    <label htmlFor="subject"/>
                     <input
                         className="input"
                         type="text"
+                        id="subject"
                         name="subject"
                         placeholder="Subject"
                         required
                     />
+                    <label htmlFor="message"/>
                     <textarea
                         className="input textarea"
+                        id="message"
                         name="message"
                         placeholder="Message"
                         required
                     ></textarea>
                     <div className="submit-button-container">
-    <button className="submit-button">Submit</button>
-</div>
+                        <button className="submit-button">Submit</button>
+                    </div>
                 </form>
             ) : (
                 <span className="result">{result}</span>
