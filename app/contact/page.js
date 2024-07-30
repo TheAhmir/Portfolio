@@ -24,13 +24,13 @@ export default function Page() {
 
     return (
         <>
-        <head>
+        <Head>
         <link
           rel="canonical"
           href="https://ahmirpostell.com/contact"
           key="canonical"
         />
-        </head>
+        </Head>
         <Contact />
         </>
     );

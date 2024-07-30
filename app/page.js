@@ -5,9 +5,40 @@ import Link from "next/link";
 import Typewriter_Component from "./home/typewriter";
 import Flashcards from "./home/flashcards";
 
+export const metadata = {
+  title: "Ahmir Postell - Data Analyst Portfolio",
+  description: "Ahmir Postell's portfolio showcasing technical skills and projects. Learn more or contact me.",
+  keywords: [
+    "ahmir",
+    "postell",
+    "ahmirpostell",
+    "ahmir postell",
+    "data analyst",
+    "data science",
+    "python",
+    "r",
+    "portfolio",
+    "react",
+    "machine learning",
+    "business analytics",
+    "SQL",
+    "professional portfolio",
+    "personal portfolio",
+    "Ahmir Postell portfolio"
+  ],
+};
+
 export default function Home() {
 
   return (
+    <>
+    <Head>
+    <link
+          rel="canonical"
+          href="https://ahmirpostell.com"
+          key="canonical"
+        />
+    </Head>
     <div className="homepage">
       <div className="pages">
       <div className="starter">
@@ -35,5 +66,6 @@ export default function Home() {
     }
       </div>
     </div>
+    </>
   );
 }
