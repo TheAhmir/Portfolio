@@ -10,10 +10,38 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata = {
+  title: "Ahmir Postell - Data Analyst Portfolio",
+  description: "Ahmir Postell's portfolio showcasing technical skills and projects. Learn more or contact me.",
+  keywords: [
+    "ahmir",
+    "postell",
+    "ahmirpostell",
+    "ahmir postell",
+    "data analyst",
+    "data science",
+    "python",
+    "r",
+    "portfolio",
+    "react",
+    "machine learning",
+    "business analytics",
+    "SQL",
+    "professional portfolio",
+    "personal portfolio",
+    "Ahmir Postell portfolio"
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+      <link
+          rel="canonical"
+          href="https://ahmirpostell.com"
+          key="canonical"
+        />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
