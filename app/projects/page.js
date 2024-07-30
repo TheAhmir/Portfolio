@@ -25,13 +25,13 @@ export default function Page() {
 
     return (
         <>
-        <Head>
+        <head>
         <link
           rel="canonical"
           href="https://ahmirpostell.com/projects"
           key="canonical"
         />
-        </Head>
+        </head>
         <div>
             <div className="projects-intro">
                 <h1 className="projects-title">Projects</h1>

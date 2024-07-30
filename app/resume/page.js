@@ -49,13 +49,13 @@ export default function Page() {
 
     return (
         <>
-        <Head>
+        <head>
         <link
           rel="canonical"
           href="https://ahmirpostell.com/resume"
           key="canonical"
         />
-        </Head>
+        </head>
         <div className='resume-page'>
             <div className='intro'>
                 <h1 className='resume-page-title '>Resume</h1>
