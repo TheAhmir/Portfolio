@@ -1,6 +1,7 @@
 import { SignIn } from '@clerk/nextjs';
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import { ClerkProvider } from '@clerk/nextjs';
 import "../../admin-notes.css"
 
 export default function Page() {
@@ -10,6 +11,7 @@ export default function Page() {
       }
 
   return (
+    <ClerkProvider>
     <div className='admin-page'>
         <SignIn appearance={{
         elements: {
@@ -19,5 +21,6 @@ export default function Page() {
         },
       }} />
     </div>
+    </ClerkProvider>
   )
 }

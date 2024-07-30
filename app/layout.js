@@ -4,7 +4,7 @@ import Nav from "../nav/nav.js"
 import React from "react";
 import Divider from '@mui/material/Divider';
 import Media from "./global_components/media";
-import { ClerkProvider } from '@clerk/nextjs';
+import Head from 'next/head';
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -36,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
@@ -50,11 +50,10 @@ export default function RootLayout({ children }) {
           type="image/<generated>"
           sizes="<generated>"
         />
-      </head>
+      </Head>
       <GoogleTagManager gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
-      <ClerkProvider>
       <body className={inter.className}>
         <div className="nav">
           <Nav />
@@ -67,7 +66,6 @@ export default function RootLayout({ children }) {
         <Media />
         </div>
       </body>
-      </ClerkProvider>
     </html>
   );
 }
