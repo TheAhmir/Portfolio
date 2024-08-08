@@ -1,26 +1,57 @@
+'use client';
 
-import { auth } from '@clerk/nextjs/server';
-import { redirect } from 'next/navigation';
-import { SignOutButton } from "@clerk/nextjs";
-import { folderIDS, noteIDS } from '../temp_data';
-import "./admin-home.css"
+import { useEffect, useState } from 'react';
+import { useAuth, SignOutButton } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
+import './admin-home.css';
 
 export default function Page() {
-    const { userId } = auth();
+  const { isSignedIn } = useAuth();
+  const [data, setData] = useState([]);
+  const router = useRouter();
 
-    if (!userId) {
-      redirect('/admin/sign-in');
+  useEffect(() => {
+    // Redirect to sign-in page if not signed in
+    if (!isSignedIn) {
+      router.push('/admin/sign-in');
+      return;
     }
 
-    return (
-        <div className='home-page'>
-            {folderIDS.map((id) => (
-                <a href={`/admin/folder/${id}`} key={id}>{id}</a>
-            ))}
-            {<a href={`/admin/note/${noteIDS[0]}`}>{noteIDS[0]}</a>}
-            <SignOutButton redirectUrl="/">
-                <button>Sign out</button>
-            </SignOutButton>
+    // Fetch data from the API
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/getFolders');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error('Failed to fetch data', error);
+      }
+    };
+
+    fetchData();
+  }, [isSignedIn, router]);
+
+  // Display data from the API
+  return (
+    <div className='home-page'>
+      <h1>Folders</h1>
+      {data.length > 0 ? (
+        <div>
+          {data.map((item) => (
+            <div key={item.id}>
+              <a href={`/admin/folder/${item.id}`}>{item.folder_name}</a>
+            </div>
+          ))}
         </div>
-    )
+      ) : (
+        <p>No folders available.</p>
+      )}
+      <SignOutButton redirectUrl="/">
+        <button>Sign out</button>
+      </SignOutButton>
+    </div>
+  );
 }
