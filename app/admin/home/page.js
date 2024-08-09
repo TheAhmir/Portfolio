@@ -82,7 +82,7 @@ export default function Page() {
         </div>
       ) : (
         <div className='filler-screen'>
-          <h1 className='filler-header'>You haven't created any documents yet!</h1>
+          <h1 className='filler-header'>You haven&apos;t created any documents yet!</h1>
           <h3 className='filler-button'>Create a document</h3>
         </div>
       )}
