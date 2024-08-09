@@ -3,6 +3,11 @@
 import { useEffect, useState } from 'react';
 import { useAuth, SignOutButton } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
+import Divider from '@mui/material/Divider';
+import { FaFolder } from "react-icons/fa";
+import { FaRegFolderOpen } from "react-icons/fa6";
+import { AiTwotoneFileMarkdown } from "react-icons/ai";
+import { BiSearch } from "react-icons/bi";
 import './admin-home.css';
 
 export default function Page() {
@@ -20,7 +25,7 @@ export default function Page() {
     // Fetch data from the API
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/getFolders');
+        const response = await fetch('/api/getRoot');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -31,27 +36,56 @@ export default function Page() {
       }
     };
 
-    fetchData();
+    fetchData(); 
   }, [isSignedIn, router]);
 
   // Display data from the API
   return (
     <div className='home-page'>
-      <h1>Folders</h1>
+      <div className='nav-bg'>
+        <div className='nav-items'>
+          <div className='add_content'>+</div>
+          <div className='search-bar'>
+          <BiSearch />
+            <input
+        type="text"
+        className="search-text"
+        placeholder="Search for document"
+      />
+          </div>
+          <SignOutButton redirectUrl="/">
+            <div className='signout'>Sign Out</div>
+          </SignOutButton>
+        </div>
+      </div>
       {data.length > 0 ? (
-        <div>
+        <div className="grid-container">
           {data.map((item) => (
-            <div key={item.id}>
-              <a href={`/admin/folder/${item.id}`}>{item.folder_name}</a>
+            item.folder_name ? 
+            <div key={item.folder_id}>
+              <a className='folder-group' href={`/admin/folder/${item.folder_id}`} style={{ textDecoration: 'none' }}>
+                <FaFolder className='folder-icon' />
+                <FaRegFolderOpen className='hover-folder-icon' />
+                <p className='caption-text'>{item.folder_name}</p>
+                </a>
+            </div>
+
+            :
+
+            <div key={item.note_id}>
+              <a className='file-group' href={`/admin/folder/${item.note_id}`} style={{ textDecoration: 'none' }}>
+                <AiTwotoneFileMarkdown className='file-icon' />
+                <p className='caption-text'>{item.note_title}</p>
+                </a>
             </div>
           ))}
         </div>
       ) : (
-        <p>No folders available.</p>
+        <div className='filler-screen'>
+          <h1 className='filler-header'>You haven't created any documents yet!</h1>
+          <h3 className='filler-button'>Create a document</h3>
+        </div>
       )}
-      <SignOutButton redirectUrl="/">
-        <button>Sign out</button>
-      </SignOutButton>
     </div>
   );
 }
