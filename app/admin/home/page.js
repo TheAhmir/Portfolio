@@ -8,11 +8,13 @@ import { FaFolder } from "react-icons/fa";
 import { FaRegFolderOpen } from "react-icons/fa6";
 import { AiTwotoneFileMarkdown } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
+import Loader from '@/app/global_components/loader';
 import './admin-home.css';
 
 export default function Page() {
   const { isSignedIn } = useAuth();
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // Loading state
   const router = useRouter();
 
   useEffect(() => {
@@ -24,6 +26,7 @@ export default function Page() {
 
     // Fetch data from the API
     const fetchData = async () => {
+      setLoading(true); // Set loading to true before fetching data
       try {
         const response = await fetch('/api/getRoot');
         if (!response.ok) {
@@ -33,6 +36,8 @@ export default function Page() {
         setData(result);
       } catch (error) {
         console.error('Failed to fetch data', error);
+      } finally {
+        setLoading(false); // Set loading to false after data is fetched
       }
     };
 
@@ -58,7 +63,9 @@ export default function Page() {
           </SignOutButton>
         </div>
       </div>
-      {data.length > 0 ? (
+      {loading ? (  // Check if loading is true
+        <Loader />
+      ) : data.length > 0 ? (
         <div className="grid-container">
           {data.map((item) => (
             item.folder_name ? 
