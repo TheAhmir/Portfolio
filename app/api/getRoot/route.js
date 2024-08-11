@@ -9,8 +9,7 @@ export async function GET() {
                parent_folder_id, 
                folder_name, 
                NULL AS note_id, 
-               NULL AS note_title, 
-               NULL AS note_content, 
+               NULL AS note_title,
                created_at, 
                updated_at
         FROM Folders
@@ -27,7 +26,6 @@ export async function GET() {
                NULL AS folder_name, 
                note_id, 
                note_title, 
-               note_content, 
                created_at, 
                updated_at
         FROM Notes
@@ -37,7 +35,8 @@ export async function GET() {
           WHERE folder_name = 'Root Folder'
         )
       )
-      SELECT * FROM rootDir;
+      SELECT * FROM rootDir
+      ORDER BY updated_at DESC;
     `);
     return new Response(JSON.stringify(result.recordset), {
       status: 200,
