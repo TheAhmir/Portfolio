@@ -8,9 +8,9 @@ export default function Typewriter_Component() {
     const [text] = useTypewriter({ // Destructure the value returned by useTypewriter
         words: [
             "MSBA Student",
-            "SQL Database Expert",
+            "SQL Developer",
             "Python and R Programmer",
-            "Data Analysis Specialist"
+            "Data Analyst"
         ],
         loop: true,
         delaySpeed: 2000,
