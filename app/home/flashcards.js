@@ -18,7 +18,7 @@ export default async function Flashcards() {
     }
     return (
         <>
-        <p className="summary">Current online MSBA student with a bachelor&apos;s degree in Data Science and Computer Science. I bring hands-on experience in Azure SQL Database, non-relational databases, and web development, with proficiency in Python, R, SQL, JavaScript, and Tableau.</p>
+        <p className="summary">{intro.intro}</p>
         <div className='cards'>
             <div className='single_card'>
             {intro.part1_image && (
