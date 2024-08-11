@@ -8,7 +8,7 @@
     width: 100vw;
 }
 
-.nav-bg {
+.admin-nav-bg {
     width: 100%;
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@
     box-shadow: 0 6px 5px -6px black;
 }
 
-.nav-items {
+.admin-nav-items {
     display: flex;
     justify-content: space-between; /* Distribute space between items */
     align-items: center; /* Center items vertically */

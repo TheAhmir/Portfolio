@@ -47,8 +47,8 @@ export default function Page() {
   // Display data from the API
   return (
     <div className='home-page'>
-      <div className='nav-bg'>
-        <div className='nav-items'>
+      <div className='admin-nav-bg'>
+        <div className='admin-nav-items'>
           <div className='add_content'>+</div>
           <div className='search-bar'>
           <BiSearch />
