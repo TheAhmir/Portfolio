@@ -16,7 +16,7 @@
 .nav-items {
     display: flex;
     gap: 50px;
-    font-size: small;
+    font-size: 13px;
 }
 
 .nav-text {
