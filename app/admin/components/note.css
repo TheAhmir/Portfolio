@@ -1,0 +1,22 @@
+.notes-page {
+    display: flex;
+    overflow-y: scroll;
+}
+
+.textarea {
+    width: 50%;
+    height: 100vh;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.markdown {
+    width:50%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+}

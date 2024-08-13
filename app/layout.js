@@ -57,9 +57,7 @@ export default function RootLayout({ children }) {
       <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
       <ClerkProvider>
       <body className={inter.className}>
-        <div className="nav">
-          <Nav />
-        </div>
+        <Nav />
         <div className="children">
           {children}
         </div>

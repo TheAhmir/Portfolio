@@ -80,7 +80,7 @@ export default function Page() {
             :
 
             <div key={item.note_id}>
-              <a className='file-group' href={`/admin/folder/${item.note_id}`} style={{ textDecoration: 'none' }}>
+              <a className='file-group' href={`/admin/note/${item.note_id}`} style={{ textDecoration: 'none' }}>
                 <AiTwotoneFileMarkdown className='file-icon' />
                 <p className='caption-text'>{item.note_title}</p>
                 </a>

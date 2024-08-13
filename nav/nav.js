@@ -11,7 +11,7 @@ export default function Nav() {
     const navigation = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const hideComponents = navigation.startsWith('/admin/home');
+    const hideComponents = navigation.startsWith('/admin');
 
     const handleMenuClick = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -24,7 +24,7 @@ export default function Nav() {
     if (hideComponents) return null
 
     return (
-        <>
+        <div className='nav'>
             <div className='top'>
                 <div className="bg">
                     <div className="nav-list">
@@ -82,6 +82,6 @@ export default function Nav() {
                         />
                     </ AnimatePresence>
                 )}
-        </>
+        </div>
     );
 }
