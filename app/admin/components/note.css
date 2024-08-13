@@ -1,22 +1,87 @@
+.full-page {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .notes-page {
     display: flex;
     overflow-y: scroll;
 }
 
 .textarea {
-    width: 50%;
-    height: 100vh;
+    width: 50%; /* Initial width */
+    height: auto; /* Automatically adjust height based on content */
+    min-height: 90vh; /* Ensure the height is at least as tall as the viewport */
     padding: 20px;
     font-size: 1rem;
+    resize: none; /* Disable the native resize functionality */
+    overflow: scroll; /* Hide overflow to avoid scrollbars */
 }
 
 .markdown {
-    width:50%;
-    height: 100vh;
+    width: 50%;
+    height: 90vh;
     padding: 20px;
+    box-sizing: border-box; 
+    overflow: scroll;
 }
 
 .note-header {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Ensure space between elements */
+    border-bottom: 1.5px solid rgba(0, 255, 255, 0.7);
+    padding: 2px;
+    padding-top: 5px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+.note-file-icon {
+    padding-left: 20px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #708090;
+}
+
+.note-title {
+    padding-left: 10px;
+    flex: 1; /* Allow title to take up available space */
+    margin: 0;
+    
+}
+
+.note-updated_at {
+    margin: 0;
+    margin-right: 20px; /* Add space before the button */
+    opacity: 0.3;
+    font-size:medium;
+}
+
+.note-download-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.note-download-icon {
+    font-size: 2rem;
+    font-weight: 200;
+    color: #708090;
+}
+
+.note-title-input {
+    flex: 1; /* Allow input to take up available space */
+    padding-left: 10px;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    border: none;
+    color: whitesmoke;
+    margin: 0;
+    background: transparent;
+    outline: none;
+    margin-right: 20px; /* Adjust spacing if needed */
 }

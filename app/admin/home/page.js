@@ -65,7 +65,7 @@ export default function Page() {
       </div>
       {loading ? (  // Check if loading is true
         <Loader />
-      ) : data.length > 0 ? (
+      ) : (
         <div className="grid-container">
           {data.map((item) => (
             item.folder_name ? 
@@ -87,12 +87,7 @@ export default function Page() {
             </div>
           ))}
         </div>
-      ) : (
-        <div className='filler-screen'>
-          <h1 className='filler-header'>You haven&apos;t created any documents yet!</h1>
-          <h3 className='filler-button'>Create a document</h3>
-        </div>
-      )}
+      ) }
     </div>
   );
 }
