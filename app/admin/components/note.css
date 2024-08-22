@@ -85,3 +85,10 @@
     outline: none;
     margin-right: 20px; /* Adjust spacing if needed */
 }
+
+.updated_at_loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2rem;
+}

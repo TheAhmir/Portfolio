@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import Loader from '@/app/global_components/loader';
 import { AiOutlineDownload } from "react-icons/ai";
 import { AiTwotoneFileMarkdown } from 'react-icons/ai';
 import './note.css';
@@ -11,6 +12,15 @@ import './note.css';
 export default function NoteTaking({ type, data }) {
     const [title, setTitle] = useState(data.note_title); // Manage title state
     const [input, setInput] = useState(data.note_content);
+    const [updated_at, setUpdated_At] = useState(data.updated_at);
+    const [failed, setFailed] = useState(false);
+    const [loading, setLoading] = useState(false)
+
+    /* 
+    set another state for type that switches type to search 
+    and changes ui to search and note-taking 
+    */
+   
     const markdownRef = useRef(null);
 
     const formatDate = (dateString) => {
@@ -71,6 +81,37 @@ export default function NoteTaking({ type, data }) {
             pdf.save('note.pdf');
         }
     };
+
+    const handleSave = async (e) => {
+        let new_updated_at = new Date().toISOString();
+        try {
+            setLoading(true);
+            const encodedTitle = encodeURIComponent(title);
+            const encodedContent = encodeURIComponent(input);
+            const response = await fetch(`/api/updateNote?note_id=${data.note_id}&note_title=${encodedTitle}&note_content=${encodedContent}&updated_at=${new_updated_at}`);
+            
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Network response was not ok: ${response.statusText} - ${errorText}`);
+            }
+            setFailed(false);
+        } catch (error) {
+            console.error('Failed to fetch data:', error);
+            setFailed(true);
+        } finally {
+            setUpdated_At(new_updated_at);
+            setLoading(false);
+        }
+    };
+    
+
+    const handleKeyDown = (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+            e.preventDefault();
+            handleSave(e);
+        }
+    };
+
     
 
     if (type === 'default') {
@@ -85,8 +126,13 @@ export default function NoteTaking({ type, data }) {
                         className='note-title-input'
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
+                        onKeyDown={handleKeyDown}
                     />
-                    <p className='note-updated_at'>{formatDate(data.updated_at)}</p>
+                    {loading ? 
+                    <>
+                        <p className='note-updated_at'>Saving note...</p>
+                    </> :
+                    <p className='note-updated_at'>{failed ? 'Failed to save': formatDate(updated_at)}</p>}
                     <button onClick={downloadPdf} className='note-download-button'>
                         <AiOutlineDownload className='note-download-icon'/>
                     </button>
@@ -96,6 +142,7 @@ export default function NoteTaking({ type, data }) {
                         className='textarea'
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={handleKeyDown}
                     />
                     <ReactMarkdown
                         ref={markdownRef}

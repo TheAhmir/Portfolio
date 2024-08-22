@@ -15,6 +15,8 @@ export default function Page() {
   const { isSignedIn } = useAuth();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredData, setFilteredData] = useState(data);
   const router = useRouter();
 
   useEffect(() => {
@@ -44,6 +46,18 @@ export default function Page() {
     fetchData(); 
   }, [isSignedIn, router]);
 
+  useEffect(() => {
+    // Filter data based on the search query, handling null values
+    const filtered = data.filter((item) => {
+        const folderMatch = item.folder_name && item.folder_name.toLowerCase().includes(searchQuery.toLowerCase());
+        const titleMatch = item.note_title && item.note_title.toLowerCase().includes(searchQuery.toLowerCase());
+        return folderMatch || titleMatch;
+    });
+    setFilteredData(filtered);
+}, [searchQuery, data]);
+
+
+
   // Display data from the API
   return (
     <div className='home-page'>
@@ -56,6 +70,8 @@ export default function Page() {
         type="text"
         className="search-text"
         placeholder="Search for document"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
           </div>
           <SignOutButton redirectUrl="/">
@@ -67,7 +83,7 @@ export default function Page() {
         <Loader />
       ) : (
         <div className="grid-container">
-          {data.map((item) => (
+          {filteredData.map((item) => (
             item.folder_name ? 
             <div key={item.folder_id}>
               <a className='folder-group' href={`/admin/folder/${item.folder_id}`} style={{ textDecoration: 'none' }}>
