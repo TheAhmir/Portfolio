@@ -174,3 +174,9 @@
     grid-auto-rows: minmax(100px, auto); /* Adjust 100px as needed */
     gap: 5px; /* Space between the items */
   }
+
+.dropdown_item:hover {
+    cursor: pointer;
+}
+
+  

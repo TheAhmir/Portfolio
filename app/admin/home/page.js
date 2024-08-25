@@ -3,12 +3,13 @@
 import { useEffect, useState } from 'react';
 import { useAuth, SignOutButton } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import Divider from '@mui/material/Divider';
+import { FaPlus } from "react-icons/fa6";
 import { FaFolder } from "react-icons/fa";
 import { FaRegFolderOpen } from "react-icons/fa6";
 import { AiTwotoneFileMarkdown } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import Loader from '@/app/global_components/loader';
+import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
 import './admin-home.css';
 
 export default function Page() {
@@ -63,7 +64,22 @@ export default function Page() {
     <div className='home-page'>
       <div className='admin-nav-bg'>
         <div className='admin-nav-items'>
-          <div className='add_content'>+</div>
+          <div className='add_content'>
+          <Dropdown>
+  <DropdownTrigger>
+    <Button 
+      variant="bordered" 
+      className='add_content'
+    >
+      <FaPlus />
+    </Button>
+  </DropdownTrigger>
+  <DropdownMenu className='dropdown_menu' aria-label="Static Actions">
+    <DropdownItem className='dropdown_item' key="new_file">New file</DropdownItem>
+    <DropdownItem className='dropdown_item' key="new_folder">New folder</DropdownItem>
+  </DropdownMenu>
+</Dropdown>
+          </div>
           <div className='search-bar'>
           <BiSearch />
             <input
