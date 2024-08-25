@@ -23,7 +23,7 @@ export async function GET(req) {
       INSERT INTO Notes (note_id, note_title, note_content, created_at, updated_at, parent_folder_id)
       VALUES (@RandomID, 'Untitled', '# New markdown note', @CurrentTime, @CurrentTime, @parentId);
 
-      SELECT TOP 1 * FROM Notes
+      SELECT TOP 1 note_id FROM Notes
       WHERE note_id = @RandomID;
       `);
 

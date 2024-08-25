@@ -1,23 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useAuth, SignOutButton } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
-import { FaPlus } from "react-icons/fa6";
-import { FaFolder } from "react-icons/fa";
-import { FaRegFolderOpen } from "react-icons/fa6";
-import { AiTwotoneFileMarkdown } from "react-icons/ai";
-import { BiSearch } from "react-icons/bi";
+import { useAuth } from '@clerk/nextjs';
 import Loader from '@/app/global_components/loader';
-import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
-import './admin-home.css';
+import DirPage from "../components/dir_page"
 
 export default function Page() {
   const { isSignedIn } = useAuth();
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredData, setFilteredData] = useState(data);
+  const [loading, setLoading] = useState(true); 
+  const [isFetching, setIsFetching] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -29,6 +22,8 @@ export default function Page() {
 
     // Fetch data from the API
     const fetchData = async () => {
+        if (isFetching) return;
+        setIsFetching(true);
       setLoading(true); // Set loading to true before fetching data
       try {
         const response = await fetch('/api/getRoot');
@@ -41,85 +36,18 @@ export default function Page() {
         console.error('Failed to fetch data', error);
       } finally {
         setLoading(false); // Set loading to false after data is fetched
+        setIsFetching(false);
       }
     };
 
     fetchData(); 
   }, [isSignedIn, router]);
 
-  useEffect(() => {
-    // Filter data based on the search query, handling null values
-    const filtered = data.filter((item) => {
-        const folderMatch = item.folder_name && item.folder_name.toLowerCase().includes(searchQuery.toLowerCase());
-        const titleMatch = item.note_title && item.note_title.toLowerCase().includes(searchQuery.toLowerCase());
-        return folderMatch || titleMatch;
-    });
-    setFilteredData(filtered);
-}, [searchQuery, data]);
-
-
 
   // Display data from the API
   return (
-    <div className='home-page'>
-      <div className='admin-nav-bg'>
-        <div className='admin-nav-items'>
-          <div className='add_content'>
-          <Dropdown>
-  <DropdownTrigger>
-    <Button 
-      variant="bordered" 
-      className='add_content'
-    >
-      <FaPlus />
-    </Button>
-  </DropdownTrigger>
-  <DropdownMenu className='dropdown_menu' aria-label="Static Actions">
-    <DropdownItem className='dropdown_item' key="new_file">New file</DropdownItem>
-    <DropdownItem className='dropdown_item' key="new_folder">New folder</DropdownItem>
-  </DropdownMenu>
-</Dropdown>
-          </div>
-          <div className='search-bar'>
-          <BiSearch />
-            <input
-        type="text"
-        className="search-text"
-        placeholder="Search for document"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
-          </div>
-          <SignOutButton redirectUrl="/">
-            <div className='signout'>Sign Out</div>
-          </SignOutButton>
-        </div>
-      </div>
-      {loading ? (  // Check if loading is true
-        <Loader />
-      ) : (
-        <div className="grid-container">
-          {filteredData.map((item) => (
-            item.folder_name ? 
-            <div key={item.folder_id}>
-              <a className='folder-group' href={`/admin/folder/${item.folder_id}`} style={{ textDecoration: 'none' }}>
-                <FaFolder className='folder-icon' />
-                <FaRegFolderOpen className='hover-folder-icon' />
-                <p className='caption-text'>{item.folder_name}</p>
-                </a>
-            </div>
-
-            :
-
-            <div key={item.note_id}>
-              <a className='file-group' href={`/admin/note/${item.note_id}`} style={{ textDecoration: 'none' }}>
-                <AiTwotoneFileMarkdown className='file-icon' />
-                <p className='caption-text'>{item.note_title}</p>
-                </a>
-            </div>
-          ))}
-        </div>
-      ) }
+    <div>
+        {loading ? <Loader /> : <DirPage folder_id={'c276e0e0-738e-4293-92b1-63f93c675775'} page_data={data}/>}
     </div>
   );
 }

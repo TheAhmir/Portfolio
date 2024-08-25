@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '@/app/global_components/loader';
 import { usePathname } from 'next/navigation';
-import NoteTaking from '../../components/note_taking';
+import NoteTaking from '../../../../components/note_taking';
 
-import '../../components/note.css';
+import '../../../../components/note.css';
 
 export default function Page() {
     const [data, setData] = useState([]);
@@ -20,10 +20,12 @@ export default function Page() {
 
     const note_id = getLastSegment(pathname);
 
+
     useEffect(() => {
         const fetchData = async () => {
             if (isFetching) return;
             setIsFetching(true);
+
             setLoading(true);
             try {
                 const response = await fetch(`/api/getNote?note_id=${note_id}`);
