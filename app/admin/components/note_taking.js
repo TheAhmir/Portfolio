@@ -98,7 +98,7 @@ export default function NoteTaking({ type, data }) {
         return (
             <>
                 <div className='note-header'>
-                    <a href='/admin/home' style={{ textDecoration: 'none' }} className='note-home-button'>
+                    <a href={data.parent_folder_id ? `admin/folder/${data.parent_folder_id}` : '/admin/home'} style={{ textDecoration: 'none' }} className='note-home-button'>
                         <AiTwotoneFileMarkdown className='note-file-icon' />
                     </a>
                     <input
