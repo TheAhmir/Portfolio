@@ -1,6 +1,7 @@
 import { connectToDatabase } from '../../../db';
 
-export async function GET() {
+export async function GET(req, res) {
+  res.setHeader('Cache-Control', 'no-store');
   try {
     const pool = await connectToDatabase();
     const result = await pool.request().query(`

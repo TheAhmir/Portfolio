@@ -26,7 +26,7 @@ export default function Page() {
         setIsFetching(true);
       setLoading(true); // Set loading to true before fetching data
       try {
-        const response = await fetch('/api/getRoot');
+        const response = await fetch(`/api/getRoot?_=${new Date().getTime()}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

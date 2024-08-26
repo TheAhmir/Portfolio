@@ -35,7 +35,7 @@ export default function Page() {
         setIsFetching(true);
       setLoading(true); // Set loading to true before fetching data
       try {
-        const response = await fetch(`/api/getFolder?folder_id=${folder_id}`);
+        const response = await fetch(`/api/getFolder?folder_id=${folder_id}?_=${new Date().getTime()}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
