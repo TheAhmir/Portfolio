@@ -1,7 +1,6 @@
 import { connectToDatabase } from '../../../db';
 
-export async function GET( req, res ) {
-    res.setHeader('Cache-Control', 'no-store');
+export async function GET( req ) {
     const { searchParams } = new URL(req.url);
   const folderId = searchParams.get('folder_id'); // Use 'note_id' to match the query parameter
 
