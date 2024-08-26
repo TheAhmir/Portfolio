@@ -1,5 +1,5 @@
 import About_Me from "./home/about/about_me";
-import Skills from "./home/skills/skills";
+// import Skills from "./home/skills/skills";
 import Head from 'next/head';
 import "./homepage.css"
 import Link from "next/link";

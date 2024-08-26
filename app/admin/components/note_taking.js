@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import MDEditor from '@uiw/react-md-editor';
-import Loader from '@/app/global_components/loader';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { AiTwotoneFileMarkdown } from 'react-icons/ai';
 import './note.css';
