@@ -52,13 +52,22 @@ export async function GET( req ) {
     `);
     return new Response(JSON.stringify(result.recordset), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Expires': '0',
+        'Pragma': 'no-cache'
+     },
     });
   } catch (err) {
     console.error('Database query failed', err);
     return new Response(JSON.stringify({ error: 'Database query failed' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Expires': '0',
+        'Pragma': 'no-cache' },
     });
   }
 }
