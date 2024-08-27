@@ -3,7 +3,8 @@
     margin-top: 0;
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 50vh;
+    height: auto;
+    width: auto;
     overflow: hidden;
 }
 
@@ -18,6 +19,7 @@
 .headshot {
     max-width: 35%; /* Ensure the image doesn't exceed its container */
     height: auto; /* Maintain the aspect ratio */
+    object-fit: contain;
 }
 
 .bio {
