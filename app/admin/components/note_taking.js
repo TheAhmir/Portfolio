@@ -17,10 +17,6 @@ export default function NoteTaking({ type, data }) {
     const [loading, setLoading] = useState(false);
     const markdownRef = useRef(null);
 
-    const links_regex = /(https?:\/\/[^\s]+)/g;
-
-    
-
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return new Intl.DateTimeFormat('en-US', {
