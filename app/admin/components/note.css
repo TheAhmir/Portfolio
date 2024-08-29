@@ -1,6 +1,7 @@
 .full-page {
-    height: 90vh;
     display: flex;
+    height: 90%;
+    width: 100vw;
     justify-content: center;
     align-items: center;
 }

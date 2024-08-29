@@ -15,6 +15,11 @@ export default function NoteTaking({ type, data }) {
     const [updated_at, setUpdated_At] = useState(data.updated_at);
     const [failed, setFailed] = useState(false);
     const [loading, setLoading] = useState(false);
+    const markdownRef = useRef(null);
+
+    const links_regex = /(https?:\/\/[^\s]+)/g;
+
+    
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -119,10 +124,9 @@ export default function NoteTaking({ type, data }) {
                 </div>
                 <div className='notes-page'>
                     <textarea
-                        className='textarea'
+                        className='textarea-note'
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        onKeyDown={handleKeyDown}
                     />
                     <ReactMarkdown
                         ref={markdownRef}
