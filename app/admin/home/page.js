@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@clerk/nextjs';
 import Loader from '@/app/global_components/loader';
 import DirPage from "../components/dir_page"
+import 'frontend/app/admin/components/loader-note.css'
 
 export default function Page() {
   const { isSignedIn } = useAuth();
@@ -47,7 +48,7 @@ export default function Page() {
   // Display data from the API
   return (
     <div>
-        {loading ? <div className='loader'><Loader /></div> : <DirPage folder_id={'c276e0e0-738e-4293-92b1-63f93c675775'} page_data={data}/>}
+        {loading ? <div className='loader-note'><Loader /></div> : <DirPage folder_id={'c276e0e0-738e-4293-92b1-63f93c675775'} page_data={data}/>}
     </div>
   );
 }
