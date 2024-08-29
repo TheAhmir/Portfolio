@@ -15,10 +15,6 @@ export default function NoteTaking({ type, data }) {
     const [updated_at, setUpdated_At] = useState(data.updated_at);
     const [failed, setFailed] = useState(false);
     const [loading, setLoading] = useState(false);
-    const markdownRef = useRef(null);
-
-    // regex to get links from input text (to be used to style change links)
-    // const links_regex = /(https?:\/\/[^\s]+)/g;
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -92,8 +88,8 @@ export default function NoteTaking({ type, data }) {
 
     useEffect(() => {
         const handleKeyDown = (e) => {
-            e.preventDefault();
             if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+                e.preventDefault();
                 handleSave();
             }
         };
@@ -123,9 +119,10 @@ export default function NoteTaking({ type, data }) {
                 </div>
                 <div className='notes-page'>
                     <textarea
-                        className='textarea-note'
+                        className='textarea'
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={handleKeyDown}
                     />
                     <ReactMarkdown
                         ref={markdownRef}
