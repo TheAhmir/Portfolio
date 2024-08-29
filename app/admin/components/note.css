@@ -10,11 +10,13 @@
     overflow-y: scroll;
 }
 
-.textarea {
+.textarea-note {
     width: 50%; /* Initial width */
     height: auto; /* Automatically adjust height based on content */
     min-height: 90vh; /* Ensure the height is at least as tall as the viewport */
     padding: 20px;
+    background-color: gainsboro;
+    font-family: monospace;
     font-size: 1rem;
     resize: none; /* Disable the native resize functionality */
     overflow: scroll; /* Hide overflow to avoid scrollbars */

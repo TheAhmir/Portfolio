@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import MDEditor from '@uiw/react-md-editor';
-import { AiOutlineDownload } from 'react-icons/ai';
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import Loader from '@/app/global_components/loader';
+import { AiOutlineDownload } from "react-icons/ai";
 import { AiTwotoneFileMarkdown } from 'react-icons/ai';
 import './note.css';
 
@@ -12,6 +15,11 @@ export default function NoteTaking({ type, data }) {
     const [updated_at, setUpdated_At] = useState(data.updated_at);
     const [failed, setFailed] = useState(false);
     const [loading, setLoading] = useState(false);
+    const markdownRef = useRef(null);
+
+    const links_regex = /(https?:\/\/[^\s]+)/g;
+
+    
 
     const formatDate = (dateString) => {
         const date = new Date(dateString);
@@ -85,8 +93,8 @@ export default function NoteTaking({ type, data }) {
 
     useEffect(() => {
         const handleKeyDown = (e) => {
+            e.preventDefault();
             if ((e.metaKey || e.ctrlKey) && e.key === 's') {
-                e.preventDefault();
                 handleSave();
             }
         };
@@ -114,17 +122,40 @@ export default function NoteTaking({ type, data }) {
                         <AiOutlineDownload className='note-download-icon' />
                     </button>
                 </div>
-                <div className='note-editor'>
-                    <MDEditor
+                <div className='notes-page'>
+                    <textarea
+                        className='textarea-note'
                         value={input}
-                        onChange={setInput}
-                        preview='live'
-                        height={600}
+                        onChange={(e) => setInput(e.target.value)}
                     />
+                    <ReactMarkdown
+                        ref={markdownRef}
+                        className='markdown'
+                        components={{
+                            code({ node, inline, className, children, ...props }) {
+                                const match = /language-(\w+)/.exec(className || '');
+                                return !inline && match ? (
+                                    <SyntaxHighlighter
+                                        style={a11yDark}
+                                        language={match[1]}
+                                        PreTag="div"
+                                        {...props}
+                                    >
+                                        {String(children).replace(/\n$/, '')}
+                                    </SyntaxHighlighter>
+                                ) : (
+                                    <code className={className} {...props}>
+                                        {children}
+                                    </code>
+                                );
+                            }
+                        }}
+                    >
+                        {input}
+                    </ReactMarkdown>
                 </div>
             </>
         );
     }
-
     return null;
 }

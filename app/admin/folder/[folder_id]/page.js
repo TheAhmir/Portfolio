@@ -56,7 +56,7 @@ export default function Page() {
   // Display data from the API
   return (
     <div>
-        {loading ? <Loader /> : <DirPage folder_id={folder_id} page_data={data}/>}
+        {loading ? <div className='loader'><Loader /></div> : <DirPage folder_id={folder_id} page_data={data}/>}
     </div>
   );
 }

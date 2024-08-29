@@ -47,7 +47,7 @@ export default function Page() {
   // Display data from the API
   return (
     <div>
-        {loading ? <Loader /> : <DirPage folder_id={'c276e0e0-738e-4293-92b1-63f93c675775'} page_data={data}/>}
+        {loading ? <div className='loader'><Loader /></div> : <DirPage folder_id={'c276e0e0-738e-4293-92b1-63f93c675775'} page_data={data}/>}
     </div>
   );
 }

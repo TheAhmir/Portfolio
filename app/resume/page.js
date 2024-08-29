@@ -62,9 +62,9 @@ export default function Page() {
             </div>
             <div className='education'>
                 <div className='top-line'>
-                <Link href='/Ahmir_Postell_Resume.pdf' target="_blank" style={{ textDecoration: 'none' }} className="download">
-                        <h1 className='download-button'>Download Resume</h1>
-                    </Link>
+                <h1 className="download">
+                    <Link href='/Ahmir_Postell_Resume.pdf' target="_blank" style={{ textDecoration: 'none' }} className='download-button'>Download Resume</Link>
+                    </h1>
                     <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.5 }} />
                     <h1 className='resume-title'>Education</h1>
                 </div>
