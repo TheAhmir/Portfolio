@@ -17,6 +17,9 @@ export default function NoteTaking({ type, data }) {
     const [loading, setLoading] = useState(false);
     const markdownRef = useRef(null);
 
+    // regex to get links from input text (to be used to style change links)
+    // const links_regex = /(https?:\/\/[^\s]+)/g;
+
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         return new Intl.DateTimeFormat('en-US', {

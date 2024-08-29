@@ -6,7 +6,7 @@ import { useAuth } from '@clerk/nextjs';
 import Loader from '@/app/global_components/loader';
 import { usePathname } from 'next/navigation';
 import DirPage from "../../components/dir_page";
-import 'frontend/app/admin/components/loader-note.css';
+import '../../components/loader-note.css';
 
 export default function Page() {
   const { isSignedIn } = useAuth();
