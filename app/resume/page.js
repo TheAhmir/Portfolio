@@ -80,40 +80,6 @@ export default function Page() {
                     <Link href='/Ahmir_Postell_Resume.pdf' target="_blank" style={{ textDecoration: 'none' }} className='download-button'>Download Resume</Link>
                     </h1>
                     <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.5 }} />
-                    <div className='Professional Skills'>
-                <h1 className='resume-title'>Professional Skills</h1>
-                <div className='major-skills-2'>
-                    <div className='resume-skills'>
-                        <li><b>Programming Languages: </b>Python, R, Java, JavaScript, HTML, CSS, SQL, C</li>
-                        <li><b>Data Science Packages/Libraries: </b>
-    <ul className='skills-list'>
-        <li className='skill-section'><u>Python:</u>
-            <ul className='sublist'>
-                <li>numpy</li>
-                <li>Pandas</li>
-                <li>Matplotlib</li>
-                <li>Scikit-Learn</li>
-                <li>Pyvis</li>
-                <li>NetworkX</li>
-                <li>Spacy</li>
-                <li>NLTK</li>
-            </ul>
-        </li>
-        <li className='skill-section'><u>R:</u>
-            <ul className='sublist'>
-                <li>dplyr</li>
-                <li>ggplot2</li>
-            </ul>
-        </li>
-    </ul>
-</li>
-
-                        <li><b>Technologies & Techniques: </b>Microsoft Office, Tableau, Git, Xcode, React, Web Scraping, Data Engineering, Data Cleaning, Database Management, Data Visualization, Statistical Analysis, Regression, Predictive Analytics, Streamlit</li>
-                    </div>
-
-                </div>
-            </div>
-                    <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.3 }} />
                     <h1 className='resume-title'>Education</h1>
                 </div>
                 <div>
@@ -194,6 +160,40 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.3 }} />
+            <div className='Professional Skills'>
+                <h1 className='resume-title'>Professional Skills</h1>
+                <div className='major-skills-2'>
+                    <div className='resume-skills'>
+                        <li><b>Programming Languages: </b>Python, R, Java, JavaScript, HTML, CSS, SQL, C</li>
+                        <li><b>Data Science Packages/Libraries: </b>
+    <ul className='skills-list'>
+        <li className='skill-section'><u>Python:</u>
+            <ul className='sublist'>
+                <li>numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Scikit-Learn</li>
+                <li>Pyvis</li>
+                <li>NetworkX</li>
+                <li>Spacy</li>
+                <li>NLTK</li>
+            </ul>
+        </li>
+        <li className='skill-section'><u>R:</u>
+            <ul className='sublist'>
+                <li>dplyr</li>
+                <li>ggplot2</li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+                        <li><b>Technologies & Techniques: </b>Microsoft Office, Tableau, Git, Xcode, React, Web Scraping, Data Engineering, Data Cleaning, Database Management, Data Visualization, Statistical Analysis, Regression, Predictive Analytics, Streamlit</li>
+                    </div>
+
                 </div>
             </div>
             <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.3 }} />
