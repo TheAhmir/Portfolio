@@ -35,6 +35,20 @@ export default function Page() {
         'Competitive Programming'
     ]
 
+    const certificate = [
+        'Python',
+        'Pandas',
+        'Matplotlib',
+        'Scikit-Learn',
+        'Statsmodels',
+        'Regression Analysis',
+        'Linear Regression',
+        'Logistic Regression',
+        'Decision Trees',
+        'Random Forest',
+        'XGBoost'
+    ]
+
     const ds_courses = [
         'Statistical Data Analysis', 
         'Data Visualization', 
@@ -66,9 +80,60 @@ export default function Page() {
                     <Link href='/Ahmir_Postell_Resume.pdf' target="_blank" style={{ textDecoration: 'none' }} className='download-button'>Download Resume</Link>
                     </h1>
                     <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.5 }} />
+                    <div className='Professional Skills'>
+                <h1 className='resume-title'>Professional Skills</h1>
+                <div className='major-skills-2'>
+                    <div className='resume-skills'>
+                        <li><b>Programming Languages: </b>Python, R, Java, JavaScript, HTML, CSS, SQL, C</li>
+                        <li><b>Data Science Packages/Libraries: </b>
+    <ul className='skills-list'>
+        <li className='skill-section'><u>Python:</u>
+            <ul className='sublist'>
+                <li>numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Scikit-Learn</li>
+                <li>Pyvis</li>
+                <li>NetworkX</li>
+                <li>Spacy</li>
+                <li>NLTK</li>
+            </ul>
+        </li>
+        <li className='skill-section'><u>R:</u>
+            <ul className='sublist'>
+                <li>dplyr</li>
+                <li>ggplot2</li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+                        <li><b>Technologies & Techniques: </b>Microsoft Office, Tableau, Git, Xcode, React, Web Scraping, Data Engineering, Data Cleaning, Database Management, Data Visualization, Statistical Analysis, Regression, Predictive Analytics, Streamlit</li>
+                    </div>
+
+                </div>
+            </div>
+                    <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.3 }} />
                     <h1 className='resume-title'>Education</h1>
                 </div>
                 <div>
+                <a className='major-2' href='https://www.coursera.org/account/accomplishments/specialization/P8C3Z8UYOR0U' target="_blank" style={{ textDecoration: 'none' }}>
+                        <div className='row-1'>
+                            <h2 className='time'>Google Advanced Data Analytics</h2>
+                            <div className='setting'>
+                                <h4>by Google on Coursera</h4>
+                                <h3>Obtained 2024</h3>
+                            </div>
+                        </div>
+                        <div className='row-2'>
+                            <h2 className='coursework'>Skills/Techniques:</h2>
+                            <div className='courses'>
+                            {certificate.map((course, index) => (
+                                <h3 className='list-item' key={index}>• {course}</h3>
+                            ))}
+                            </div>
+                        </div>
+                    </a>
                     <div className='major'>
                         <div className='row-1'>
                             <h2 className='time'>Expected Feb. 2026</h2>
@@ -92,6 +157,7 @@ export default function Page() {
                             </div> */}
                         </div>
                     </div>
+                    
                     <div className='major'>
                         <div className='row-1'>
                             <h2 className='time'>2020 - 2024</h2>
@@ -128,18 +194,6 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.3 }} />
-            <div className='Professional Skills'>
-                <h1 className='resume-title'>Professional Skills</h1>
-                <div className='major-skills'>
-                    <div className='resume-skills'>
-                        <li><b>Programming Languages: </b>Python, R, Java, JavaScript, HTML, CSS, SQL, C</li>
-                        <li><b>Data Science Packages/Libraries: </b>Python (numpy, Pandas, Matplotlib, Scikit-Learn, Pyvis, NetworkX, Spacy, NLTK), R (dplyr, ggplot2)</li>
-                        <li><b>Technologies & Techniques: </b>Microsoft Office, Tableau, Git, Xcode, React, Web Scraping, Data Engineering, Data Cleaning, Database Management, Data Visualization, Statistical Analysis, Regression, Predictive Analytics, Streamlit</li>
-                    </div>
-
                 </div>
             </div>
             <Divider variant="middle" sx={{ bgcolor: 'gray', opacity: 0.3 }} />
