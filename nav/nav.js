@@ -26,6 +26,7 @@ export default function Nav() {
     return (
         <div className='nav'>
             <div className='top'>
+                <div className='first-nav'>
                 <div className="bg">
                     <div className="nav-list">
                         <div className="nav-items">
@@ -43,6 +44,7 @@ export default function Nav() {
                             </Link>
                         </div>
                     </div>
+                </div>
                 </div>
                 <button onClick={handleMenuClick} className='menuButton'>
                     <HiMenu />
