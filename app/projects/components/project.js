@@ -9,21 +9,40 @@ import Loader from '@/app/global_components/loader';
 import "./projects.css";
 
 export default function Project() {
+    const [allProjects, setAllProjects] = useState([]);
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [section, setSection] = useState("Data");
+
+    const handleChangeSectionData = () => {
+        setSection("Data");
+    }
+
+    const handleChangeSectionSoftware = () => {
+        setSection("Software");
+    }
 
     useEffect(() => {
         const fetchProjects = async () => {
             const data = await getProjects();
-            setProjects(data);
+            setAllProjects(data);
             setLoading(false);
         };
 
         fetchProjects();
     }, []);
 
+    useEffect(() => {
+        setProjects(allProjects.filter((project) => project.tags.includes(section)));
+    }, [section, allProjects])
+
     return (
         <>
+        <div className="project-switch">
+              <h3 className={`sectionTitle ${section == "Data" ? "active" : "inactive"}`} onClick={handleChangeSectionData}>Data</h3>
+              <h3 className='divider'>|</h3>
+              <h3 className={`sectionTitle ${section == "Software" ? "active" : "inactive"}`} onClick={handleChangeSectionSoftware}>Software</h3>
+        </div>
         {loading ? 
         <div className='loader'>
         <Loader />

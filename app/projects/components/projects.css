@@ -94,6 +94,32 @@
     height: 50vh;
 }
 
+.project-switch {
+    display: flex;
+    justify-content: center;
+    align-items: centers;
+
+    h3 {
+        padding: 10px;
+    }
+
+    .active {
+        color: black;
+        background-color:cornflowerblue;
+        border-radius: 20px;
+        cursor:default;
+    }
+
+    .inactive {
+        opacity: 0.5;
+    }
+
+    .inactive:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 768px) {
     .card-top {
         display: flex;
