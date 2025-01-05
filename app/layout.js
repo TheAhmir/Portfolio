@@ -4,7 +4,7 @@ import Nav from "../nav/nav.js"
 import React from "react";
 import Divider from '@mui/material/Divider';
 import Media from "./global_components/media";
-import { ClerkProvider } from '@clerk/nextjs';
+//import { ClerkProvider } from '@clerk/nextjs';
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
