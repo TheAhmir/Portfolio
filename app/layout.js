@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
       <GoogleTagManager gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
-      <ClerkProvider>
+      {/*<ClerkProvider>*/}
       <body className={inter.className}>
         <Nav />
         <div className="children">
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
         <Media />
         </div>
       </body>
-      </ClerkProvider>
+      {/*</ClerkProvider>*/}
     </html>
   );
 }
