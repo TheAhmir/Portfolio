@@ -37,7 +37,7 @@ export default function Media() {
                 @ 2024 by Ahmir Postell
             </div>
             :
-            <a href="/admin/sign-in" rel="noopener noreferrer" className='creds'>
+            <a href={/*`/admin/sign-in`8*/""} rel="noopener noreferrer" className='creds'>
                 @ 2024 by Ahmir Postell
             </a>
             }
