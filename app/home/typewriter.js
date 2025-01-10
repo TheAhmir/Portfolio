@@ -7,10 +7,9 @@ import './intro_components.css'
 export default function Typewriter_Component() {
     const [text] = useTypewriter({ // Destructure the value returned by useTypewriter
         words: [
-            "MSBA Student",
-            "SQL Developer",
-            "Python and R Programmer",
-            "Data Analyst"
+            "MSBA Candidate",
+            "Computer Science and Data Science Background",
+            "Problem Solver"
         ],
         loop: true,
         delaySpeed: 2000,
