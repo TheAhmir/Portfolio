@@ -19,53 +19,7 @@ export default async function Flashcards() {
     return (
         <>
         <p className="summary">{intro.intro}</p>
-        <div className='cards'>
-            <div className='single_card'>
-            {intro.part1_image && (
-                <img 
-                className='image'
-                src={urlFor(intro.part1_image)}
-                alt={`${intro.part1_name.replace("'", "&apos;")}-image`}
-                />
-            )}
-            {intro.part1_name && (
-                <h2 className='title'>{intro.part1_name}</h2>
-            )}
-            {intro.part1_desc && (
-                <PortableText className='desc' value={intro.part1_desc} />
-            )}
-            </div>
-            <div className='single_card'>
-            {intro.part2_image && (
-                <img 
-                className='image'
-                src={urlFor(intro.part2_image)}
-                alt={`${intro.part2_name.replace("'", "&apos;")}-image`}
-                />
-            )}
-            {intro.part2_name && (
-                <h2 className='title'>{intro.part2_name}</h2>
-            )}
-            {intro.part2_desc && (
-                <PortableText value={intro.part2_desc} />
-            )}
-            </div>
-            <div className='single_card'>
-            {intro.part3_image && (
-                <img 
-                className='image'
-                src={urlFor(intro.part3_image)}
-                alt={`${intro.part3_name.replace("'", "&apos;")}-image`}
-                />
-            )}
-            {intro.part3_name && (
-                <h2 className='title'>{intro.part3_name}</h2>
-            )}
-            {intro.part3_desc && (
-                <PortableText className='desc' value={intro.part3_desc} />
-            )}
-            </div>
-        </div>
+        
         </>
     )
 }

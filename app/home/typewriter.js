@@ -5,6 +5,7 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import './intro_components.css'
 
 export default function Typewriter_Component() {
+    
     const [text] = useTypewriter({ // Destructure the value returned by useTypewriter
         words: [
             "MSBA Candidate",

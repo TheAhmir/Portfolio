@@ -4,6 +4,7 @@ import Head from 'next/head';
 import "./homepage.css"
 import Link from "next/link";
 import Typewriter_Component from "./home/typewriter";
+import Headshot from "./home/headshot/headshot"
 import Flashcards from "./home/flashcards";
 
 export const metadata = {
@@ -45,6 +46,7 @@ export default function Home() {
       <div className="starter">
         <div className="beginning">
         <h1 className="ahmir">Ahmir Postell</h1>
+        <Headshot />
         <Typewriter_Component />
         <Flashcards />
         

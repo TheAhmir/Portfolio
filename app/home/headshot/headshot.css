@@ -1,0 +1,16 @@
+.headshot {
+    max-width: 35%; /* Ensure the image doesn't exceed its container */
+    height: 35%; /* Maintain the aspect ratio */
+    object-fit: contain;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+
+    .headshot {
+        max-height: 50%;
+    }
+}

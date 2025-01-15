@@ -16,13 +16,6 @@ export default async function About_Me() {
         <div className="page">
             <h1>About Me</h1>
             <div className="content">
-                {bio.image && (
-                    <img 
-                        className="headshot"
-                        src={urlFor(bio.image)}
-                        alt="Ahmir Headshot Photo"
-                    />
-                )}
                 <div className="bio">
                     <PortableText value={bio.bio} />
                 </div>
