@@ -1,6 +1,7 @@
 .all-projects {
     color: #36454F;
     display: grid;
+    justify-content: center;
     grid-template-columns:  repeat(auto-fit, minmax(370px, 1fr));; /* One column grid */
     grid-auto-rows: auto; /* Automatic row heights */
     gap: 4rem; /* Adjust the gap between rows as needed */
@@ -133,8 +134,9 @@
     color: black;
     background-color: cornflowerblue;
     border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
     cursor: default;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .inactive {

@@ -19,6 +19,12 @@ export default async function About_Me() {
                 <div className="bio">
                     <PortableText value={bio.bio} />
                 </div>
+                <div className="bio">
+                    <PortableText value={bio.bio2} />
+                </div>
+                <div className="bio">
+                    <PortableText value={bio.bio3} />
+                </div>
             </div>          
         </div>
     )
