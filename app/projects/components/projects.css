@@ -1,5 +1,9 @@
 .all-projects {
     color: #36454F;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(370px, 1fr));; /* One column grid */
+    grid-auto-rows: auto; /* Automatic row heights */
+    gap: 4rem; /* Adjust the gap between rows as needed */
 }
 
 .left-side ul {
@@ -8,10 +12,31 @@
 }
 
 .skills-title {
+    font-size: small;
     font-weight: 500;
 }
 
+.skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    font-size: x-small;
+}
+
+.card-title {
+    font-size:x-small;
+}
+
+.card-desc {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: small;
+}
+
 .projects-card {
+    width: 300px;
+    height: fit-content;
     padding: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -43,7 +68,7 @@
 }
 
 .project-image {
-    width: 300px; /* Adjust the width as needed */
+    width: 200px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
     margin-left: 2rem;
 }
@@ -98,27 +123,27 @@
     display: flex;
     justify-content: center;
     align-items: centers;
+}
 
-    h3 {
-        padding: 10px;
-    }
+.project-switch h3 {
+    padding: 10px;
+}
 
-    .active {
-        color: black;
-        background-color:cornflowerblue;
-        border-radius: 20px;
-        cursor:default;
-        transition: background-color 0.3s ease;
-    }
+.active-now {
+    color: black;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    cursor: default;
+    transition: background-color 0.3s ease;
+}
 
-    .inactive {
-        opacity: 0.5;
-    }
+.inactive {
+    opacity: 0.5;
+}
 
-    .inactive:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
+.inactive:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

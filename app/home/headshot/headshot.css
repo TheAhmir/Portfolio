@@ -1,6 +1,6 @@
 .headshot {
-    max-width: 35%; /* Ensure the image doesn't exceed its container */
-    height: 35%; /* Maintain the aspect ratio */
+    max-width: 250px; /* Ensure the image doesn't exceed its container */
+    max-height: 250px; /* Maintain the aspect ratio */
     object-fit: contain;
     margin-bottom: 2rem;
     margin-top: 2rem;

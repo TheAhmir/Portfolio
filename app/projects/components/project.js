@@ -39,9 +39,9 @@ export default function Project() {
     return (
         <>
         <div className="project-switch">
-              <h3 className={`sectionTitle ${section == "Data" ? "active" : "inactive"}`} onClick={handleChangeSectionData}>Data</h3>
+              <h3 className={`sectionTitle ${section == "Data" ? "active-now" : "inactive"}`} onClick={handleChangeSectionData}>Data</h3>
               <h3 className='divider'>|</h3>
-              <h3 className={`sectionTitle ${section == "Software" ? "active" : "inactive"}`} onClick={handleChangeSectionSoftware}>Software</h3>
+              <h3 className={`sectionTitle ${section == "Software" ? "active-now" : "inactive"}`} onClick={handleChangeSectionSoftware}>Software</h3>
         </div>
         {loading ? 
         <div className='loader'>
@@ -51,28 +51,26 @@ export default function Project() {
             {projects.map((project) => (
                 <div className="projects-card" key={project.title}>
                     <div className='card-top'>
-                    <div className="left-side">
+                    <div className="">
                         <div className="card-title">
                             <h1>{project.title}</h1>
-                            <p>{project.desc}</p>
-                        </div>
-                        <div>
-                            <i className="skills-title">Skills/Tools</i>
-                            <ul>
-                                {project.skill.map((skill, index) => (
-                                    <li key={index}>{skill}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="right-side">
-                        <img
+                            <img
                             className="project-image"
                             src={urlFor(project.image)}
                             width={200}
                             alt={`${project.title}-image`}
                             loading="lazy"
                         />
+                            <p className='card-desc'>{project.desc}</p>
+                        </div>
+                        <div>
+                            <i className="skills-title">Skills/Tools</i>
+                            <ul className='skills'>
+                                {project.skill.map((skill, index) => (
+                                    <li key={index}>{skill}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                     </div>
                     <div className="card-bottom">
