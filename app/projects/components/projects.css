@@ -1,5 +1,8 @@
 .all-projects {
     color: #36454F;
+    width: 90%;
+    margin-left: 2rem;
+    margin-right: 3rem;
     display: grid;
     justify-content: center;
     grid-template-columns:  repeat(auto-fit, minmax(370px, 1fr));; /* One column grid */
@@ -19,20 +22,22 @@
 
 .skills {
     width: 100%;
+    height: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    font-size: x-small;
+    font-size: small;
 }
 
 .card-title {
-    font-size:x-small;
+    font-size:small;
 }
 
 .card-desc {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: small;
+    height: 100px;
+    font-size: medium;
 }
 
 .projects-card {
@@ -71,7 +76,7 @@
 .project-image {
     width: 200px; /* Adjust the width as needed */
     height: 200px; /* Maintain the aspect ratio */
-    object-fit: contain;
+    object-fit:cover;
     margin-left: 2rem;
 }
 
