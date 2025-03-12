@@ -3,13 +3,16 @@ import Head from 'next/head';
 import "./projects.css";
 
 export const metadata = {
-    title: "Ahmir Postell - Projects | Data Analyst Portfolio",
-    description: "Explore Ahmir Postell's projects in data analysis, data science, and analytics. Skills in Python, R, SQL.",
+    title: "Ahmir Postell - Projects | Portfolio",
+    description: "Explore Ahmir Postell's projects in data analysis and software development.",
     keywords: [
       "Ahmir Postell projects",
       "Data Analyst projects",
       "Data Scientist projects",
       "data analysis projects",
+      "computer science projects",
+      "software engineer projects",
+      "software development projects",
       "business analytics projects",
       "Python projects",
       "R projects",

@@ -5,11 +5,14 @@ import Divider from '@mui/material/Divider';
 import Head from 'next/head';
  
 export const metadata = {
-    title: "Ahmir Postell - Resume | Data Analyst Portfolio",
+    title: "Ahmir Postell - Resume | Portfolio",
     description: "Ahmir Postell's resume: education, technical skills, and achievements. Connect to view resume.",
     keywords: [
       "Ahmir Postell resume",
       "Data Analyst resume",
+      "computer science",
+      "software engineer",
+      "software development",
       "Data Scientist resume",
       "data analysis",
       "business analytics",

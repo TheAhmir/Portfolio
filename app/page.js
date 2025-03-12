@@ -8,13 +8,16 @@ import Headshot from "./home/headshot/headshot"
 import Flashcards from "./home/flashcards";
 
 export const metadata = {
-  title: "Ahmir Postell - Data Analyst Portfolio",
+  title: "Ahmir Postell - Portfolio",
   description: "Ahmir Postell's portfolio showcasing technical skills and projects. Learn more or contact me.",
   keywords: [
     "ahmir",
     "postell",
     "ahmirpostell",
     "ahmir postell",
+    "computer science",
+    "software engineer",
+    "software development",
     "data analyst",
     "data science",
     "python",
