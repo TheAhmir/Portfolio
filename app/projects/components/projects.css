@@ -1,109 +1,91 @@
+/* display all projects in grid format */
 .all-projects {
-    color: #36454F;
-    width: 90%;
-    margin-left: 2rem;
-    margin-right: 3rem;
-    display: grid;
-    justify-content: center;
-    grid-template-columns:  repeat(auto-fit, minmax(370px, 1fr));; /* One column grid */
-    grid-auto-rows: auto; /* Automatic row heights */
-    gap: 4rem; /* Adjust the gap between rows as needed */
-}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 8rem;
+  row-gap: 4rem;
 
-.left-side ul {
-    column-count: 2;
-    column-gap: 1rem; /* Adjust the gap between columns as needed */
-}
-
-.skills-title {
-    font-size: small;
-    font-weight: 500;
-}
-
-.skills {
-    width: 100%;
-    height: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    font-size: small;
-}
-
-.card-title {
-    font-size:small;
-}
-
-.card-desc {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    height: 100px;
-    font-size: medium;
-}
-
-.projects-card {
-    width: 300px;
-    height: fit-content;
-    padding: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin: 2rem;
-    margin-bottom: 4rem;
-    background-color: whitesmoke;
-    border-radius: 1px;
-    box-shadow: 0px 2px 10px black;
-    transition: transform 0.3s ease;
-}
-
-.card-top {
+  /* set consistent card width height and spacing */
+  .projects-card {
     display: flex;
-    flex-direction: row;
-}
-
-.left-side {
-    display: flex;
+    position: relative;
     flex-direction: column;
-    justify-content: flex-start;
-    flex: 1; /* Allow the left side to take up available space */
-}
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+    width: 400px;
+    max-height: 500px;
+    background-color:whitesmoke;
+    color: slategrey;
+    transition: max-height 0.3s ease-in-out;
+  }
+  .projects-card:hover {
+    max-height: 1000px;
+  }
 
-.right-side {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; /* Center the content vertically */
-    margin-left: auto; /* Push the right side to the extreme right */
-}
+  
 
-.project-image {
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Maintain the aspect ratio */
-    object-fit:cover;
-    margin-left: 2rem;
 }
-
 .card-bottom {
-    margin-top: 1rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+/* animating hide show skills section */
+.skills-section {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 1000px;
+  overflow: hidden;
+  text-align: start;
+  transition: opacity 0.2s ease, transform 0.3s ease, max-height 0.3s ease;
+  pointer-events: auto;
+}
+.skills-section.hide {
+  opacity : 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  max-height: 0;
+}
+.skills-section.show {
+  opacity:1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 1000px;
 }
 
-.project-icons {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5rem;
-    margin-top: 2rem;
+/* images css */
+.project-image {
+  object-fit: contain;
 }
 
+/* css for uniform links */
 .project-link {
     color: #36454F;
     font-size: xx-large;
+    height: 100%;
 }
 
 .project-link:hover {
     color: black;
 }
 
+
 .hover-eye {
     display: none;
+}
+
+.project-icons {
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
 .project-icons .eye-icon:hover .default-eye {
@@ -114,9 +96,6 @@
     display: block;
 }
 
-.project-desc {
-    color: #36454F;
-}
 
 .loader {
     display: flex;
@@ -155,20 +134,4 @@
 }
 
 @media (max-width: 768px) {
-    .card-top {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center; /* Center the content horizontally */
-    }
-
-    .right-side {
-        display: flex;
-        justify-content: center;
-        align-items: center; /* Center the content vertically */
-        width: 100%; /* Make sure the right-side takes full width */
-    }
-
-    .project-image {
-        margin-left: 0;
-    }
 }
