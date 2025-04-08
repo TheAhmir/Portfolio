@@ -11,13 +11,16 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ahmir Postell - Data Analyst Portfolio",
+  title: "Ahmir Postell - Portfolio",
   description: "Ahmir Postell's portfolio showcasing technical skills and projects. Learn more or contact me.",
   keywords: [
     "ahmir",
     "postell",
     "ahmirpostell",
     "ahmir postell",
+    "computer science",
+    "software engineer",
+    "software development",
     "data analyst",
     "data science",
     "python",
@@ -32,6 +35,7 @@ export const metadata = {
     "Ahmir Postell portfolio"
   ],
 };
+
 
 export default function RootLayout({ children }) {
   return (
