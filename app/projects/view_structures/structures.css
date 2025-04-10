@@ -1,0 +1,88 @@
+/* display all projects in grid format */
+.all-projects-default {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 8rem;
+  row-gap: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for linked list */
+.all-projects-linkedlist {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.node-switch-button {
+  display: flex;
+  align-items: center;
+  height: 500px;
+  width: 100px;
+}
+
+.node-switch-button:first-child {
+  left: 0;
+}
+
+.node-switch-button:last-child {
+  right: 0;
+}
+
+.switch-button {
+  padding: 2rem;
+  color: gray;
+
+}
+
+.switch-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.nodes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.node-visual {
+  width: 10px;
+  height: 10px;
+  border: solid slategray;
+}
+
+.node-text {
+  font-weight: 600;
+}
+
+.project-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-top: 2rem;
+}
+
+.cur-index {
+  background-color: white;
+}
